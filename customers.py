@@ -4,68 +4,33 @@
         self.order = order
 
     customer_order = input("Please choose your order from the ") """
-class server:
-    order = input("your order to make is")
 
-    customer_orders = [
+customer_orders_day_one = [
 {
     "name": "Julia",
     "price": 12.99,
     "food type": "waffles with syrup and blueberries",
-    "instructions": "Toast the waffles, add syrup, add blueberries."
+    "instructions": "Toast the waffles, add syrup, add blueberries.",
+    "status": "angry"
 },
 {
-    "name": "Blue T-shirt",
-    "price": 12.99,
-    "department": "women's shirts",
-    "description": "100 percent cotton, color: blue."
+    "name": "Gerald",
+    "price": 4.99,
+    "food type": "hot coffee with milk and sugar",
+    "instructions": "pour the coffee, add a splash of milk, and a teaspoon of sugar.",
+    "status": "calm"
 },
 {
-    "name": "Red T-shirt",
-    "price": 12.99,
-    "department": "women's shirts",
-    "description": "100 percent cotton, color: red"
-},
-{
-    "name": "Black T-shirt",
-    "price": 12.99,
-    "department": "women's shirts",
-    "description": "100 percent cotton, color: black"
-},
-{
-    "name": "Purple T-shirt",
-    "price": 12.99,
-    "department": "women's shirts",
-    "description": "100 percent cotton, color: purple"
-},
-{
-    "name": "High Rise Jean shorts",
-    "price": 24.99,
-    "department": "women's shorts",
-    "description": "100 percent cotton denim, color: denim blue"
-},
-{
-    "name": "black sweatpants, fold-over waistband",
-    "price": 20.99,
-    "department": "women's pants",
-    "description": "100 percent cotton, color: black"
-},
-{
-    "name": "long sleeveless dress",
-    "price": 54.99,
-    "department": "women's formalwear",
-    "description": "100 percent cotton denim, color: pink"
-},
-{
-    "name": "short sleeveless dress",
-    "price": 54.99,
-    "department": "women's formalwear",
-    "description": "100 percent cotton denim, color: blue"
-},
-{
-    "name": "long sleeve dress",
-    "price": 54.99,
-    "department": "women's formalwear",
-    "description": "100 percent cotton denim, color: pink"
+    "name": "Agamemnon",
+    "price": 120,
+    "food type": "Two kids meal pancakes, an adult size bacon and eggs, covered in gold leaf.",
+    "instructions": "Toast the waffles, add syrup, add blueberries, put on two plates. Fry the bacon and eggs, put on a plate.",
+    "status": "LIVID."
 },
     ]
+for customer in customer_orders_day_one:
+    print(f"Customer Name: {customer["name"]}, Customer Status: {customer["status"]}")
+
+    customer_choice = input("Please enter the name of the customer you would like to serve.")
+    if customer_choice in customer_orders_day_one:
+        print(customer_orders_day_one['name'],['price'],['food type'],['instructions'],['status'])
