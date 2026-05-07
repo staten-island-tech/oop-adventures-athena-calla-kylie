@@ -26,4 +26,11 @@ class BankAccount:
 name = BankAccount(user_name, 100)
 user_name.show_balance
 
-class CustomerHappiness(customer, name, happiness_level)-
+class CustomerHappiness:
+    def __init__(self, name, happiness_level):
+        self.name = name
+        self.happiness_level = happiness_level
+    def happiness_level():
+
+    def show_level():
+         
