@@ -24,10 +24,20 @@ class BankAccount:
     def show_balance(self):
         print(f"{self.owner} has ${self.__balance}")
 name = BankAccount(user_name, 100)
-user_name.show_balance
-
+""" print(user_name.show_balance())
+ """""" print(my_teacher.display_info()) 
+ """
 class CustomerHappiness:
     def __init__(self, name, happiness_level):
         self.name = name
         self.happiness_level = happiness_level
-        
+calm = False  
+angry = False
+LIVID = False
+
+if happiness_level > 60:
+    calm = True
+elif happiness_level > 40
+    angry = True
+
+
