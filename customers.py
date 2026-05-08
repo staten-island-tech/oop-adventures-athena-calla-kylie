@@ -27,12 +27,40 @@ customer_orders_day_one = [
     "instructions": "Toast the waffles, add syrup, add blueberries, put on two plates. Fry the bacon and eggs, put on a plate.",
     "status": "LIVID."
 },
+{
+    "name": "Lyla",
+    "price": 24.99,
+    "food type": "Mac and Cheese (3 orders plus extra cheese on one of them).",
+    "instructions": "Heat up the mac anc cheese, plate, sprinke extra cheese on one of them.",
+    "status": "LIVID."
+},
     ]
-for customer in customer_orders_day_one:
-    print(f"Customer Name: {customer["name"]}, Customer Status: {customer["status"]}")
 
-customer_choice = input("Please enter the name of the customer you would like to serve.")
-if customer_choice == customer["name"]:
-    print(customer_orders_day_one['name'],customer_orders_day_one['price'],customer_orders_day_one['food type'],customer_orders_day_one['instructions'],customer_orders_day_one['status'])
-else:
-    print("This customer doesn't exist")
+earnings = []
+total_money = 0
+customer_history = []
+work = True
+for index, customer in enumerate(customer_orders_day_one):
+        print(index, ":", customer["name"],customer["status"])
+
+while work:
+    serve_customers = int(input("Serve customer? Type the number of the customer you want to serve first based on status."))
+    customer_history.append(customer_orders_day_one[serve_customers]["name"])
+    earnings.append(customer_orders_day_one[serve_customers]["price"])
+    work_continiue = input("continue working or calculate earnings and score for today? Enter Yes (continiue) or No (calculate)")
+
+    if work_continiue == "No":
+         work = False
+
+
+if work == False:
+    for customer in customer_history:
+        print(f"{customer_history}")
+
+for earning in earnings:
+    total_money += earning
+print(total_money)
+for customer in customer_history:
+     print(f"{customer_history}")
+    
+
