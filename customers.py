@@ -60,6 +60,6 @@ for customer in customer_history:
 
 print(earnings)
 for earning in earnings:
-    earnings += total_money
+    total_money += earnings
 
 print (f"{customer_history, total_money}")
