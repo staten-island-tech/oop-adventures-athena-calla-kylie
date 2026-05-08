@@ -28,11 +28,13 @@ customer_orders_day_one = [
     "status": "LIVID."
 },
     ]
-for customer in customer_orders_day_one:
-    print(f"Customer Name: {customer["name"]}, Customer Status: {customer["status"]}")
-
+""" 
 customer_choice = input("Please enter the name of the customer you would like to serve.")
-if customer_choice == customer["name"]:
-    print(customer_orders_day_one['name'],customer_orders_day_one['price'],customer_orders_day_one['food type'],customer_orders_day_one['instructions'],customer_orders_day_one['status'])
-else:
-    print("This customer doesn't exist")
+
+for customer in customer_orders_day_one:
+    if customer_choice == customer_orders_day_one['name']:
+        print(f"Customer Name: {customer["name"]}, Customer Status: {customer["status"]}")
+
+    customer_choice = input("Please enter the name of the customer you would like to serve.")
+    if customer_choice in customer_orders_day_one:
+        print(customer_orders_day_one['name'],['price'],['food type'],['instructions'],['status'])
