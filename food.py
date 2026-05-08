@@ -35,6 +35,11 @@ breakfast_food = [
         "price": "$6.99",
         "description": "Crispy bacon with two eggs",
         "style": "scrambled or sunny side up"
+        },
+
+        {"name": "Breakfast Burrito",
+        "price": "$9.99",
+        "description": "A flour tortilla filled with flavorful breakfast goods"
         }
     ]
 
@@ -42,11 +47,12 @@ breakfast_drink = [
         {"name": "Hot Coffee",
         "price": "$2.99",
         "description": "hot",
-        "style": "espresso, americano, latte, or cappuccino" },
+        "style": "espresso, americano, latte, or cappuccino",
+        },
 
-            {"name": "Apple Juice",
-            "price": "$1.99",
-            "description": "cold"},
+        {"name": "Apple Juice",
+        "price": "$1.99",
+        "description": "cold"},
                 
         {"name": "Orange Juice",
         "price": "$1.99",
@@ -58,13 +64,50 @@ breakfast_drink = [
         "style": "chocolate, strawberry, or vanilla"}
     ]
 
+lunch_appetizers = [
+    {"name": "",
+     "price": "",
+     "description": ""}
+]
+lunch_food = [
+        {"name": "Macaroni and Cheese",
+        "price": "$7.99",
+        "description": "Cheesy"
+        },        
+        
+        {"name": "Burger",
+        "price": "$5.99",
+        "description": ""
+        },
+
+        {"name": "Italian Grilled Cheese Sandwiches",
+        "price": "",
+        "description": ""
+        },
+
+        {"name": "Chicken Caesar Pasta Salad",
+        "price": "",
+        "description": ""
+        },
+    ]
+    
+lunch_drinks = [
+    
+]
+
 def show_menus(Menus):
     for index, Menus in enumerate(Menus):
         print(index, ":", Menus["name"])
 show_menus(Menus)
-print(input("Select your choice of menu: "))
+print("You: 'Hi! Select your menu!'")
+print("...")
+import random
+menu_choice = ["breakfast", "lunch", "dinner"]
+selection = random.choice(menu_choice)
+print("Customer selects the", (selection), "menu")
+print(input("Show the customers the menu?"))
 
-if input == "0" or "Breakfast":
+if selection == "breakfast":
     print("Breakfast Menu: ")
     print("Foods")
     def show_menu(breakfast_food):
@@ -77,10 +120,14 @@ if input == "0" or "Breakfast":
             print(index, ":", breakfast_drink["name"], "-", breakfast_drink["price"])
     show_menu(breakfast_drink)
 
-elif input == "1" or "Lunch":
+    import random
+    breakfast_choice = [breakfast_food, breakfast_drink]
+    b_selection = random.choice(breakfast_choice)
+    print("Customer orders", (b_selection))
+elif selection == "lunch":
     print("Lunch Menu: ")
 
-elif input == "2" or "Dinner":
+elif selection == "dinner":
     print("Dinner Menu: ")
 
 
