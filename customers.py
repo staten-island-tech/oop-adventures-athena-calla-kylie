@@ -1,40 +1,70 @@
-""" class costumer:
-    def __init__(self, name, order):
-        self.name = name 
-        self.order = order
 
-    customer_order = input("Please choose your order from the ") """
 
 customer_orders_day_one = [
 {
     "name": "Julia",
     "price": 12.99,
-    "food type": "waffles with syrup and blueberries",
+    "order": "waffles with syrup and blueberries",
     "instructions": "Toast the waffles, add syrup, add blueberries.",
     "status": "angry"
 },
 {
     "name": "Gerald",
     "price": 4.99,
-    "food type": "hot coffee with milk and sugar",
+    "order": "hot coffee with milk and sugar",
     "instructions": "pour the coffee, add a splash of milk, and a teaspoon of sugar.",
     "status": "calm"
 },
 {
     "name": "Agamemnon",
     "price": 120,
-    "food type": "Two kids meal pancakes, an adult size bacon and eggs, covered in gold leaf.",
+    "order": "Two kids meal pancakes, an adult size bacon and eggs, covered in gold leaf.",
     "instructions": "Toast the waffles, add syrup, add blueberries, put on two plates. Fry the bacon and eggs, put on a plate.",
     "status": "LIVID."
 },
 {
     "name": "Lyla",
     "price": 24.99,
-    "food type": "Mac and Cheese (3 orders plus extra cheese on one of them).",
+    "order": "Mac and Cheese (3 orders plus extra cheese on one of them).",
+    "instructions": "Heat up the mac anc cheese, plate, sprinke extra cheese on one of them.",
+    "status": "LIVID."
+},
+{
+    "name": "",
+    "price": 24.99,
+    "order": "Mac and Cheese (3 orders plus extra cheese on one of them).",
+    "instructions": "Heat up the mac anc cheese, plate, sprinke extra cheese on one of them.",
+    "status": "LIVID."
+},
+{
+    "name": "Jake",
+    "price": 12.99,
+    "order": "Mac and Cheese (3 orders plus extra cheese on one of them).",
+    "instructions": "Heat up the mac anc cheese, plate, sprinke extra cheese on one of them.",
+    "status": "LIVID."
+},
+{
+    "name": "Marty",
+    "price": 7.99,
+    "order": "Mac and Cheese (3 orders plus extra cheese on one of them).",
+    "instructions": "Heat up the mac anc cheese, plate, sprinke extra cheese on one of them.",
+    "status": "LIVID."
+},
+{
+    "name": "Mr. Whalen",
+    "price": 5000000.99,
+    "order": "everyting. give me everything.",
     "instructions": "Heat up the mac anc cheese, plate, sprinke extra cheese on one of them.",
     "status": "LIVID."
 },
     ]
+class Customer:
+    def __init__(self, name, order, status):
+        self.name = name 
+        self.order = order
+        self.status = status
+name = Customer() 
+
 
 earnings = []
 total_money = 0
@@ -52,15 +82,11 @@ while work:
     if work_continiue == "No":
          work = False
 
-
 if work == False:
-    for customer in customer_history:
-        print(f"{customer_history}")
 
-for earning in earnings:
-    total_money += earning
+    for earning in earnings:
+        total_money += earning
 print(total_money)
-for customer in customer_history:
-     print(f"{customer_history}")
+print(f"{customer_history}")
     
 
