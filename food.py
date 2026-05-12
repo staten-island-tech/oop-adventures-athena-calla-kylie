@@ -1,22 +1,14 @@
-""" class menu():
+class menu():
     def __init__(self, order_name, description, price,):
         self.order_name = order_name
         self.description = description
-        self.price = price """
+        self.price = price
 
 Menus = [
     {"name": "Breakfast"},
     {"name": "Lunch"},
     {"name": "Dinner"}
 ]
-
-
-""" if input == "0" or "Breakfast":
-    print("Breakfast Menu: ")
-elif input == "1" or "Lunch":
-    print("Lunch Menu: ")
-elif input == "2" or "Dinner":
-    print("Dinner Menu: ") """
 
 breakfast_food = [
         {"name": "Waffles",
@@ -65,18 +57,18 @@ breakfast_drink = [
     ]
 
 lunch_appetizer = [
-    {"name": "Caesar Salad",
-     "price": "",
-     "description": ""},
+        {"name": "Caesar Salad",
+        "price": "",
+        "description": ""},
 
-    {"name": "",
-     "price": "",
-     "description": ""},
+        {"name": "Sausage Bites",
+        "price": "",
+        "description": "Spinach Artichoke Dip"},
 
-    {"name": "",
-     "price": "",
-     "description": ""}
-    ]
+        {"name": "Fried Zucchini",
+        "price": "",
+        "description": ""}
+        ]
 
 lunch_food = [
         {"name": "Macaroni and Cheese",
@@ -101,7 +93,69 @@ lunch_food = [
     ]
     
 lunch_drink = [
-        {"name": "",
+    {"name": "Soda",
+     "price": "$0.99",
+     "description": ""},
+
+    {"name": "",
+     "price": "",
+     "description": ""},
+
+    {"name": "",
+     "price": "",
+     "description": ""}
+    
+    {"name": "",
+     "price": "",
+     "description": ""}
+    ]
+
+dinner_appetizer = [
+    {"name": "",
+     "price": "",
+     "description": ""},
+
+    {"name": "",
+     "price": "",
+     "description": ""},
+
+    {"name": "",
+     "price": "",
+     "description": ""},
+
+    {"name": "",
+     "price": "",
+     "description": ""}
+    ]
+
+dinner_food = [
+    {"name": "",
+     "price": "",
+     "description": ""},
+    
+    {"name": "",
+     "price": "",
+     "description": ""},
+
+    {"name": "",
+     "price": "",
+     "description": ""},
+
+    {"name": "",
+     "price": "",
+     "description": ""}
+    ]
+
+dinner_dessert = [
+    {"name": "",
+     "price": "",
+     "description": ""},
+    
+    {"name": "",
+     "price": "",
+     "description": ""},
+
+    {"name": "",
      "price": "",
      "description": ""},
 
@@ -136,9 +190,10 @@ if selection == "breakfast":
     show_menu(breakfast_drink)
 
     import random
-    breakfast_f = [breakfast_food[0], breakfast_drink[0]]
+    breakfast_f = [breakfast_food, breakfast_drink]
     b_selection = random.sample(breakfast_f, 2)
-    print("Customer orders", (b_selection))
+    print("Customer orders", (b_selection["name"]))
+
 elif selection == "lunch":
     print("Lunch Menu: ")
     print("Appetizers")
@@ -158,12 +213,35 @@ elif selection == "lunch":
     show_menu(lunch_drink)
 
     import random
-    lunch_choice = [lunch_food[0], lunch_drink[0]]
+    lunch_choice = [lunch_food, lunch_drink]
     l_selection = random.sample(lunch_choice, 2)
-    print("Customer orders", (l_selection))
+    print("Customer orders", (l_selection["name"]))
 
 elif selection == "dinner":
     print("Dinner Menu: ")
+    print("Appetizers")
+    def show_menu(dinner_appetizer):
+        for index, dinner_appetizer in enumerate(dinner_appetizer):
+            print(index, ":", dinner_appetizer["name"], "-", dinner_appetizer["price"])
+    show_menu(dinner_appetizer)
+    print("Foods")
+    def show_menu(dinner_food):
+        for index, dinner_food in enumerate(dinner_food):
+            print(index, ":", dinner_food["name"], "-", dinner_food["price"])
+    show_menu(dinner_food)
+    print("Drinks")
+    def show_menu(dinner_dessert):
+        for index, dinner_dessert in enumerate(dinner_dessert):
+            print(index, ":", dinner_dessert["name"], "-", dinner_dessert["price"])
+    show_menu(dinner_dessert)
+    def show_menu(lunch_drink):
+        for index, lunch_drink in enumerate(lunch_drink):
+            print(index, ":", lunch_drink["name"], "-", lunch_drink["price"])
+    show_menu(lunch_drink)
 
+    import random
+    dinner_choice = [dinner_food, lunch_drink]
+    d_selection = random.sample(dinner_choice, 2)
+    print("Customer orders", (d_selection["name"]))
 
 
