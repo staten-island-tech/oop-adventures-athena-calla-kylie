@@ -64,11 +64,20 @@ breakfast_drink = [
         "style": "chocolate, strawberry, or vanilla"}
     ]
 
-lunch_appetizers = [
+lunch_appetizer = [
+    {"name": "Caesar Salad",
+     "price": "",
+     "description": ""},
+
+    {"name": "",
+     "price": "",
+     "description": ""},
+
     {"name": "",
      "price": "",
      "description": ""}
-]
+    ]
+
 lunch_food = [
         {"name": "Macaroni and Cheese",
         "price": "$7.99",
@@ -91,21 +100,27 @@ lunch_food = [
         },
     ]
     
-lunch_drinks = [
-    
-]
+lunch_drink = [
+        {"name": "",
+     "price": "",
+     "description": ""},
+
+    {"name": "",
+     "price": "",
+     "description": ""}
+    ]
 
 def show_menus(Menus):
     for index, Menus in enumerate(Menus):
         print(index, ":", Menus["name"])
 show_menus(Menus)
 print("You: 'Hi! Select your menu!'")
-print("...")
+print(". . .")
 import random
 menu_choice = ["breakfast", "lunch", "dinner"]
 selection = random.choice(menu_choice)
 print("Customer selects the", (selection), "menu")
-print(input("Show the customers the menu?"))
+print(input("Show customers the menu..."))
 
 if selection == "breakfast":
     print("Breakfast Menu: ")
@@ -121,11 +136,31 @@ if selection == "breakfast":
     show_menu(breakfast_drink)
 
     import random
-    breakfast_choice = [breakfast_food, breakfast_drink]
-    b_selection = random.choice(breakfast_choice)
+    breakfast_f = [breakfast_food[0], breakfast_drink[0]]
+    b_selection = random.sample(breakfast_f, 2)
     print("Customer orders", (b_selection))
 elif selection == "lunch":
     print("Lunch Menu: ")
+    print("Appetizers")
+    def show_menu(lunch_appetizer):
+        for index, lunch_appetizer in enumerate(lunch_appetizer):
+            print(index, ":", lunch_appetizer["name"], "-", lunch_appetizer["price"])
+    show_menu(lunch_appetizer)
+    print("Foods")
+    def show_menu(lunch_food):
+        for index, lunch_food in enumerate(lunch_food):
+            print(index, ":", lunch_food["name"], "-", lunch_food["price"])
+    show_menu(lunch_food)
+    print("Drinks")
+    def show_menu(lunch_drink):
+        for index, lunch_drink in enumerate(lunch_drink):
+            print(index, ":", lunch_drink["name"], "-", lunch_drink["price"])
+    show_menu(lunch_drink)
+
+    import random
+    lunch_choice = [lunch_food[0], lunch_drink[0]]
+    l_selection = random.sample(lunch_choice, 2)
+    print("Customer orders", (l_selection))
 
 elif selection == "dinner":
     print("Dinner Menu: ")
