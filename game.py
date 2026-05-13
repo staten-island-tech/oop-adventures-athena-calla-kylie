@@ -28,8 +28,9 @@ customer_orders_day_one = [
     "status": "LIVID."
 },
     ]
-for customer in customer_orders_day_one:
-    print(f"Name: {customer["name"]}, Status: {customer["status"]}")
+for index, customer in enumerate(customer_orders_day_one):
+        print(index, ":", "Name :", customer["name"], "Status :", customer["status"])
+
 """ for customer in customer_orders_day_one:
     choice = input("Choose a customer to serve")
     if choice == customer["name"]:
@@ -70,7 +71,23 @@ class CustomerHappiness:
         self.happiness_level += amount
 name = CustomerHappiness(customer["name"],customer["status"],10)
 print(name.__dict__)
-while customer["name"] not in 
+
+work = True
+earnings = []
+total_money = 0
+customer_history = []
+while work:
+    serve_customers = (input("Serve customer? Type the number of the customer you want to serve first based on status."))
+    if serve_customers != customer["name"]:
+        name.add_or_subtract(-10)
+        print(name.__dict__)
+    else:
+        work_continue = input("continue working or calculate earnings and score for today? Enter Yes (continue) or No (calculate)")
+        if work_continue == "No":
+            print(name.__dict__)
+            work = False
+            break
+
 """
         
 """
