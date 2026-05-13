@@ -34,7 +34,7 @@ customer_orders_day_one = [
     "status": "LIVID."
 },
 {
-    "name": "",
+    "name": "odysseus",
     "price": 24.99,
     "tip": 2.00,
     "order": "Mac and Cheese (3 orders plus extra cheese on one of them).",
@@ -55,7 +55,15 @@ customer_orders_day_one = [
     "tip": 2.00,
     "order": "Mac and Cheese (3 orders plus extra cheese on one of them).",
     "instructions": "Heat up the mac anc cheese, plate, sprinke extra cheese on one of them.",
-    "status": "LIVID."
+    "status": "chill."
+},
+{
+    "name": "chris",
+    "price": 6.99,
+    "tip": 1.00,
+    "order": "Bacon and eggs",
+    "instructions": "Heat up the mac anc cheese, plate, sprinke extra cheese on one of them.",
+    "status": "hungry."
 },
 {
     "name": "Mr. Whalen",
@@ -66,12 +74,12 @@ customer_orders_day_one = [
     "status": "LIVID."
 },
     ]
-""" class Customer:
+'''class Customer:
     def __init__(self, name, order, status):
         self.name = name 
         self.order = order
         self.status = status
-name = Customer()  """
+name = Customer()'''
 
 
 earnings = []
@@ -96,9 +104,9 @@ while work:
 for earning in earnings:
     total_money += earning
 for tips in extra_tips:
-            totaltips += extra_tips
+    totaltips += tips
 
-print(totaltips)
-print(total_money)
-print(f"{customer_history}")
+print(f"your total earnings you worked for today were: {total_money}")
+print(f"your tip amount is:  {totaltips}")
+print(f"customers served today included: {customer_history}")
     
