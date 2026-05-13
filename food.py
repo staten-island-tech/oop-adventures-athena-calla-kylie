@@ -103,7 +103,7 @@ lunch_drink = [
 
     {"name": "",
      "price": "",
-     "description": ""}
+     "description": ""},
     
     {"name": "",
      "price": "",
@@ -190,9 +190,9 @@ if selection == "breakfast":
     show_menu(breakfast_drink)
 
     import random
-    breakfast_f = [breakfast_food, breakfast_drink]
+    breakfast_f = [breakfast_food["name"], breakfast_drink["name"]]
     b_selection = random.sample(breakfast_f, 2)
-    print("Customer orders", (b_selection["name"]))
+    print("Customer orders", (b_selection))
 
 elif selection == "lunch":
     print("Lunch Menu: ")
@@ -213,9 +213,9 @@ elif selection == "lunch":
     show_menu(lunch_drink)
 
     import random
-    lunch_choice = [lunch_food, lunch_drink]
-    l_selection = random.sample(lunch_choice, 2)
-    print("Customer orders", (l_selection["name"]))
+    lunch_choice = [lunch_food["name"], lunch_drink["name"]]
+    l_selection = random.sample(lunch_choice, 1)
+    print("Customer orders", (l_selection))
 
 elif selection == "dinner":
     print("Dinner Menu: ")
@@ -240,8 +240,8 @@ elif selection == "dinner":
     show_menu(lunch_drink)
 
     import random
-    dinner_choice = [dinner_food, lunch_drink]
+    dinner_choice = [dinner_food["name"], lunch_drink["name"]]
     d_selection = random.sample(dinner_choice, 2)
-    print("Customer orders", (d_selection["name"]))
+    print("Customer orders", (d_selection))
 
 
