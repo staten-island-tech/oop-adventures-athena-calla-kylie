@@ -1,4 +1,4 @@
-class menu():
+class menus():
     def __init__(self, order_name, description, price,):
         self.order_name = order_name
         self.description = description
@@ -191,7 +191,7 @@ if selection == "breakfast":
 
     import random
     breakfast_f = [breakfast_food["name"], breakfast_drink["name"]]
-    b_selection = random.sample(breakfast_f, 2)
+    b_selection = random.sample(breakfast_f, 1, 1)
     print("Customer orders", (b_selection))
 
 elif selection == "lunch":
@@ -214,7 +214,7 @@ elif selection == "lunch":
 
     import random
     lunch_choice = [lunch_food["name"], lunch_drink["name"]]
-    l_selection = random.sample(lunch_choice, 1)
+    l_selection = random.sample(lunch_choice, 1, 1)
     print("Customer orders", (l_selection))
 
 elif selection == "dinner":
@@ -241,7 +241,7 @@ elif selection == "dinner":
 
     import random
     dinner_choice = [dinner_food["name"], lunch_drink["name"]]
-    d_selection = random.sample(dinner_choice, 2)
+    d_selection = random.sample(dinner_choice, 1, 1)
     print("Customer orders", (d_selection))
-
+   
 
