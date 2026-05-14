@@ -28,8 +28,9 @@ customer_orders_day_one = [
     "status": "LIVID."
 },
     ]
-for index, customer in enumerate(customer_orders_day_one):
-        print(index, ":", "Name :", customer["name"], "Status :", customer["status"])
+
+for customer in customer_orders_day_one:
+        print("Name :", customer["name"],',' "Status :", customer["status"])
 
 """ for customer in customer_orders_day_one:
     choice = input("Choose a customer to serve")
@@ -69,7 +70,10 @@ class CustomerHappiness:
         self.status = status
     def add_or_subtract(self, amount):
         self.happiness_level += amount
-name = CustomerHappiness(customer["name"],customer["status"],10)
+"""     def ():
+        if amount > 10:
+       """      
+name = CustomerHappiness(customer["name"]["Julia"],customer["status"],10)
 print(name.__dict__)
 
 work = True
