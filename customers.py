@@ -1,11 +1,11 @@
-
+    
 
 customer_orders_day_one = [
 {
     "name": "Julia",
     "price": 12.99,
     "tip": 2.00,
-    "order": "waffles with syrup and blueberries",
+    "order": "{menu_selection}",
     "instructions": "Toast the waffles, add syrup, add blueberries.",
     "status": "angry"
 },
