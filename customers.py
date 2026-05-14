@@ -29,7 +29,7 @@ customer_orders_day_one = [
     "name": "Lyla",
     "price": 24.99,
     "tip": 5.00,
-    "order": "Mac and Cheese (3 orders plus extra cheese on one of them).",
+    "order": "menu.choice}",
     "instructions": "Heat up the mac anc cheese, plate, sprinke extra cheese on one of them.",
     "status": "LIVID."
 },
@@ -103,10 +103,12 @@ while work:
 
 for earning in earnings:
     total_money += earning
+    rounded_total_money = round(total_money, 2)
 for tips in extra_tips:
     totaltips += tips
+    rounded_total_tips = round(totaltips, 2)
 
-print(f"your total earnings you worked for today were: {total_money}")
-print(f"your tip amount is:  {totaltips}")
+print(f"your total earnings you worked for today were: $${rounded_total_money}")
+print(f"your tip amount is:  $${rounded_total_tips}")
 print(f"customers served today included: {customer_history}")
     
