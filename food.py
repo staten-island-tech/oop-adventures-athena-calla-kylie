@@ -97,70 +97,71 @@ lunch_drink = [
      "price": "$0.99",
      "description": ""},
 
-    {"name": "",
-     "price": "",
+    {"name": "Iced Tea",
+     "price": "$",
      "description": ""},
 
-    {"name": "",
-     "price": "",
+    {"name": "Lemonade",
+     "price": "$",
      "description": ""},
     
-    {"name": "",
-     "price": "",
-     "description": ""}
+    {"name": "Smoothie",
+     "price": "$",
+     "description": ""
+     "s"}
     ]
 
 dinner_appetizer = [
-    {"name": "",
-     "price": "",
+    {"name": "Spinach and Artichoke Dip",
+     "price": "$",
      "description": ""},
 
     {"name": "",
-     "price": "",
+     "price": "$",
      "description": ""},
 
     {"name": "",
-     "price": "",
+     "price": "$",
      "description": ""},
 
     {"name": "",
-     "price": "",
+     "price": "$",
      "description": ""}
     ]
 
 dinner_food = [
     {"name": "",
-     "price": "",
+     "price": "$",
      "description": ""},
     
     {"name": "",
-     "price": "",
+     "price": "$",
      "description": ""},
 
     {"name": "",
-     "price": "",
+     "price": "$",
      "description": ""},
 
     {"name": "",
-     "price": "",
+     "price": "$",
      "description": ""}
     ]
 
 dinner_dessert = [
     {"name": "",
-     "price": "",
+     "price": "$",
      "description": ""},
     
     {"name": "",
-     "price": "",
+     "price": "$",
      "description": ""},
 
     {"name": "",
-     "price": "",
+     "price": "$",
      "description": ""},
 
     {"name": "",
-     "price": "",
+     "price": "$",
      "description": ""}
     ]
 
