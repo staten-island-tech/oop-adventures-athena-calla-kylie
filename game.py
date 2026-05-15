@@ -29,7 +29,7 @@ customer_orders_day_one = [
 },
     ]
 
-for customer in customer_orders_day_one:
+for index, customer in enumerate(customer_orders_day_one):
         print("Name :", customer["name"],', ' "Status :", customer["status"])
 
 """ for customer in customer_orders_day_one:
@@ -85,8 +85,6 @@ while work:
     if serve_customers != customer["name"]:
         name.add_or_subtract(-10)
         print(name.__dict__)
-        if CustomerHappiness < 0:
-             print("Customer has left")
     else:
         work_continue = input("continue working or calculate earnings and score for today? Enter Yes (continue) or No (calculate)")
         if work_continue == "No":
