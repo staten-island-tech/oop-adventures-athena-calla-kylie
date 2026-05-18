@@ -12,13 +12,13 @@ Menus = [
 
 breakfast_food = [
         {"name": "Waffles",
-        "price": "$5.99",
+        "price": "$6.99",
         "description": "Three golden-brown waffles, with crispy exterior and fluffy interior",
         "topping choice" : "strawberries, blueberries, bananas, syrup, chocolate syrup, sprinkles"
         },
 
         {"name": "Pancakes",
-        "price": "$4.99",
+        "price": "$6.50",
         "description": "Three thick, fluffy golden-brown pancakes",
         "topping choice": "strawberries, blueberries, bananas, syrup, chocolate syrup, sprinkles"
         },
@@ -37,17 +37,17 @@ breakfast_food = [
 
 breakfast_drink = [
         {"name": "Hot Coffee",
-        "price": "$2.99",
+        "price": "$1.99",
         "description": "hot",
         "style": "espresso, americano, latte, or cappuccino",
         },
 
         {"name": "Apple Juice",
-        "price": "$1.99",
+        "price": "$0.99",
         "description": "cold"},
                 
         {"name": "Orange Juice",
-        "price": "$1.99",
+        "price": "$0.99",
         "description": "cold"},
 
         {"name": "Milkshake",
@@ -58,15 +58,19 @@ breakfast_drink = [
 
 lunch_appetizer = [
         {"name": "Caesar Salad",
-        "price": "",
+        "price": "$3.99",
         "description": ""},
 
         {"name": "Sausage Bites",
-        "price": "",
-        "description": "Spinach Artichoke Dip"},
+        "price": "$3.50",
+        "description": ""},
 
-        {"name": "Fried Zucchini",
-        "price": "",
+        {"name": "Spinach Artichoke Dip",
+        "price": "$3.50",
+        "description": ""},
+
+        {"name": "Mozzarella Sticks",
+        "price": "$3.99",
         "description": ""}
         ]
 
@@ -77,17 +81,17 @@ lunch_food = [
         },        
         
         {"name": "Burger",
-        "price": "$5.99",
+        "price": "$8.99",
         "description": ""
         },
 
         {"name": "Italian Grilled Cheese Sandwiches",
-        "price": "",
+        "price": "$8.50",
         "description": ""
         },
 
         {"name": "Chicken Caesar Pasta Salad",
-        "price": "",
+        "price": "$7.99",
         "description": ""
         },
     ]
@@ -98,70 +102,70 @@ lunch_drink = [
      "description": ""},
 
     {"name": "Iced Tea",
-     "price": "$",
+     "price": "$0.99",
      "description": ""},
 
     {"name": "Lemonade",
-     "price": "$",
+     "price": "$0.99",
      "description": ""},
     
     {"name": "Smoothie",
-     "price": "$",
+     "price": "$3.99",
      "description": ""
      "s"}
     ]
 
 dinner_appetizer = [
     {"name": "Spinach and Artichoke Dip",
-     "price": "$",
+     "price": "$3.50",
      "description": ""},
 
-    {"name": "",
-     "price": "$",
+    {"name": "Sausage Bites",
+     "price": "$3.50",
      "description": ""},
 
-    {"name": "",
-     "price": "$",
+    {"name": "Smoked Salmon",
+     "price": "$4.99",
      "description": ""},
 
-    {"name": "",
-     "price": "$",
+    {"name": "Charcuterie Board",
+     "price": "$7.99",
      "description": ""}
     ]
 
 dinner_food = [
-    {"name": "",
-     "price": "$",
+    {"name": "Spaghetti and Meatballs",
+     "price": "$8.99",
      "description": ""},
     
-    {"name": "",
-     "price": "$",
+    {"name": "Chicken Alfredo",
+     "price": "$9.99",
      "description": ""},
 
-    {"name": "",
-     "price": "$",
+    {"name": "Cast-Iron Steak",
+     "price": "$14.99",
      "description": ""},
 
-    {"name": "",
-     "price": "$",
+    {"name": "Burger",
+     "price": "$8.99",
      "description": ""}
     ]
 
 dinner_dessert = [
-    {"name": "",
-     "price": "$",
+    {"name": "Icecream",
+     "price": "$3.99",
      "description": ""},
     
-    {"name": "",
-     "price": "$",
+    {"name": "Molten Lava Cake",
+     "price": "$7.99",
      "description": ""},
 
-    {"name": "",
-     "price": "$",
+    {"name": "Chocolate Chip Cookies",
+     "price": "$4.99",
      "description": ""},
 
-    {"name": "",
-     "price": "$",
+    {"name": "Cheescake",
+     "price": "$6.50",
      "description": ""}
     ]
 
