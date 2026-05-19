@@ -3,16 +3,16 @@ class server_profile:
             self.name = name 
             self.gender = gender
             self.workdays = workdays
-class Sever:
+class Server:
     def __init__(self, name, money, inventory):
         self.name = name
         self.money = money
         self.inventory = inventory
 
 user_name = input("Hello! Please enter your name:")
-print(f"Welcome to {user_name}'s Resturaunt!")
+print(f"Welcome to {user_name}'s Resturaunt! You are now a server at rank {1}")
 
-name = Sever(user_name, 100, [])
+name = Server(user_name, 100, [])
 print(name.__dict__)
 
 class BankAccount:
