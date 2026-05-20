@@ -191,8 +191,24 @@ if selection == "breakfast":
     show_menu(breakfast_drink)
 
     import random
-    b_food = random.sample(breakfast_food, 1)
-    b_drink = random.sample(breakfast_drink, 1)
+    b_food = random.sample(breakfast_food,1)
+    b_drink = random.sample(breakfast_drink,1)
+    r_name = random.sample(name, 1)
+for breakfast_food in b_food:
+    print("Customer orders", breakfast_food["name"], breakfast_food["price"])
 
-print("Customer orders", (b_food))
+for breakfast_drink in b_drink:
+    print("Customer orders", breakfast_drink["name"], breakfast_drink["price"])
 
+status = [""]
+
+customers = [
+    {"name" : "customer",
+     "status" : "",
+     "order" : breakfast_drink["name"],
+     "cost" : breakfast_drink["price"],
+    }
+]
+
+for customer in customers:
+    print(customer["cost"])
