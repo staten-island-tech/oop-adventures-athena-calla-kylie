@@ -165,7 +165,7 @@ dinner_dessert = [
      "description": ""}
     ]
 name = ["Abby", "Bob", "Calla", "Devi", "Eli", "Francis", "George", "Henry", "Imogen", "Jonathan", "Katie", "Larry", "Michelle", "Nicole", "Opi", "Penguin"]
-
+status = ["SUPER Happy (100)", "Happy (99)", "Nonchalant (88)", "Annoyed (75)", "SUPER Annoyed (70)", "Mad (55)", "HUNGRY... (30)", "I AM GODZILLA (0)", "SO MAD IM ON FIRE!!!! (-10)"]
 def show_menus(Menus):
     for index, Menus in enumerate(Menus):
         print(index, ":", Menus["name"])
@@ -195,6 +195,7 @@ if selection == "breakfast":
     b_food = random.sample(breakfast_food,1)
     b_drink = random.sample(breakfast_drink,1)
     r_name = random.sample(name, 1)
+    r_status = random.sample(status, 1)
 for breakfast_food in b_food:
     print("Customer orders", breakfast_food["name"], breakfast_food["price"])
 
@@ -206,10 +207,13 @@ status = [""]
 customers = [
     {"name" : r_name,
      "status" : "",
-     "order" : breakfast_food["name"],
-     "price" :  breakfast_food["price"],
+     "order_f" : breakfast_food["name"],
+     "order_d" : breakfast_drink["name"],
+     "price_f" :  breakfast_food["price"],
+     "price_d" : breakfast_drink["price"],
+
     }
 ]
 
 for customer in customers:
-    print(customer["name"], customer["status"], customer["order"], customer["price"])
+    print(customer["name"], customer["status"], customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"])
