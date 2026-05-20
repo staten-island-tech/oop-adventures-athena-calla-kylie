@@ -164,6 +164,7 @@ dinner_dessert = [
      "price": "$",
      "description": ""}
     ]
+name = ["Abby", "Bob", "Calla", "Devi", "Eli", "Francis", "George", "Henry", "Imogen", "Jonathan", "Katie", "Larry", "Michelle", "Nicole", "Opi", "Penguin"]
 
 def show_menus(Menus):
     for index, Menus in enumerate(Menus):
@@ -203,12 +204,12 @@ for breakfast_drink in b_drink:
 status = [""]
 
 customers = [
-    {"name" : "customer",
+    {"name" : r_name,
      "status" : "",
-     "order" : breakfast_drink["name"],
-     "cost" : breakfast_drink["price"],
+     "order" : breakfast_food["name"],
+     "price" :  breakfast_food["price"],
     }
 ]
 
 for customer in customers:
-    print(customer["cost"])
+    print(customer["name"], customer["status"], customer["order"], customer["price"])
