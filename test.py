@@ -193,7 +193,7 @@ if selection == "breakfast":
     import random
     b_food = random.sample(breakfast_food,1)
     b_drink = random.sample(breakfast_drink,1)
-    r_name = random.sample(name, 1)
+    r_name = random.sample("name", 1)
 for breakfast_food in b_food:
     print("Customer orders", breakfast_food["name"], breakfast_food["price"])
 

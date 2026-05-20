@@ -10,7 +10,7 @@ class Server:
         self.inventory = inventory
 
 user_name = input("Hello! Please enter your name:")
-print(f"Welcome to {user_name}'s Resturaunt! You are now a server at rank {1}")
+print(f"Welcome to {user_name}'s Resturaunt! You are now a server at rank {1} with {"ZERO"} customers served so far.")
 
 name = Server(user_name, 100, [])
 print(name.__dict__)
@@ -29,3 +29,16 @@ name = BankAccount(user_name, 100)
 
 name = ["Abby", "Bob", "Calla", "Devi", "Eli", "Francis", "George", "Henry", "Imogen", "Jonathan", "Katie", "Larry", "Michelle", "Nicole", "Opi", "Penguin"]
 status = ["SUPER Happy (100)", "Happy (99)", "Nonchalant (88)", "Annoyed (75)", "SUPER Annoyed (70)", "Mad (55)", "HUNGRY... (30)", "I AM GODZILLA (0)", "SO MAD IM ON FIRE!!!! (-10)"]
+
+class CustomerHappiness:
+    def __init__(self, name, status, happiness_level):
+        self.name = name
+        self.happiness_level = happiness_level
+        self.status = status
+    def add_or_subtract(self, amount):
+        self.happiness_level += amount
+name = CustomerHappiness(customer["name"],customer["status"],10)
+print(name.__dict__)
+
+
+
