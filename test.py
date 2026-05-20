@@ -194,4 +194,5 @@ if selection == "breakfast":
     b_food = random.sample(breakfast_food, 1)
     b_drink = random.sample(breakfast_drink, 1)
 
-    print("Customer orders", (b_food, b_drink))
+print("Customer orders", (b_food))
+
