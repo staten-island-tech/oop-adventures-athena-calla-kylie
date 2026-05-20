@@ -26,3 +26,6 @@ class BankAccount:
     def show_balance(self):
         print(f"{self.owner} has ${self.__balance}")
 name = BankAccount(user_name, 100) 
+
+name = ["Abby", "Bob", "Calla", "Devi", "Eli", "Francis", "George", "Henry", "Imogen", "Jonathan", "Katie", "Larry", "Michelle", "Nicole", "Opi", "Penguin"]
+status = []
