@@ -11,22 +11,22 @@ Menus = [
 ]
 
 breakfast_food = [
-        {"name": "Waffles",
+        {"name": "Waffles - ",
         "price": "$6.99",
         "description": "Three golden-brown waffles, with crispy exterior and fluffy interior",
-        "topping choice" : "strawberries, blueberries, bananas, syrup, chocolate syrup, sprinkles"
+        "topping choice" : "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" "no toppings/sides"
         },
 
-        {"name": "Pancakes",
+        {"name": "Pancakes with",
         "price": "$6.50",
         "description": "Three thick, fluffy golden-brown pancakes",
-        "topping choice": "strawberries, blueberries, bananas, syrup, chocolate syrup, sprinkles"
+        "topping choice": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles"
         },
 
-        {"name": "Bacon and Eggs",
+        {"name": "Bacon and Eggs - ",
         "price": "$6.99",
         "description": "Crispy bacon with two eggs",
-        "style": "scrambled or sunny side up"
+        "style": "scrambled" or "sunny side up"
         },
 
         {"name": "Breakfast Burrito",
@@ -36,10 +36,10 @@ breakfast_food = [
     ]
 
 breakfast_drink = [
-        {"name": "Hot Coffee",
+        {"name": "Hot Coffee - ",
         "price": "$1.99",
         "description": "hot",
-        "style": "espresso, americano, latte, or cappuccino",
+        "style": "espresso" "americano" "latte" or "cappuccino",
         },
 
         {"name": "Apple Juice",
@@ -50,10 +50,10 @@ breakfast_drink = [
         "price": "$0.99",
         "description": "cold"},
 
-        {"name": "Milkshake",
+        {"name": "Milkshake - ",
         "price": "$3.99",
         "description": "cold",
-        "style": "chocolate, strawberry, or vanilla"}
+        "style": "chocolate" "strawberry" or "vanilla"}
     ]
 
 lunch_appetizer = [
@@ -142,9 +142,10 @@ dinner_food = [
      "price": "$9.99",
      "description": ""},
 
-    {"name": "Cast-Iron Steak",
+    {"name": "Cast-Iron Steak - ",
      "price": "$14.99",
-     "description": ""},
+     "description": "",
+     "style" :"rare" "medium-rare" "medium" "medium well" or "well done"},
 
     {"name": "Burger",
      "price": "$8.99",
