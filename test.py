@@ -178,7 +178,7 @@ selection = random.choice(menu_choice)
 print("Customer selects the", (selection), "menu")
 print(input("Show customers the menu..."))
 
-if selection == "breakfast":
+""" if selection == "breakfast":
     print("Breakfast Menu: ")
     print("Foods")
     def show_menu(breakfast_food):
@@ -216,44 +216,102 @@ if selection == "breakfast":
         (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["status"])
     for index, customers in enumerate(customers):
         print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["status"])
+         """
 if selection == "lunch":
     print("Lunch Menu: ")
     print("Foods")
-    def show_menu(lunch):
+    def show_menu(lunch_food):
         for index, lunch_food in enumerate(lunch_food):
             print(index, ":", lunch_food["name"], "-", lunch_food["price"])
     show_menu(lunch_food)
     print("Drinks")
-    def show_menu(breakfast_drink):
-        for index, breakfast_drink in enumerate(breakfast_drink):
-            print(index, ":", breakfast_drink["name"], "-", breakfast_drink["price"])
-    show_menu(breakfast_drink)
+    def show_menu(lunch_drink):
+        for index,lunch_drink in enumerate(lunch_drink):
+            print(index, ":", lunch_drink["name"], "-", lunch_drink["price"])
+    show_menu(lunch_drink)
+    def show_menu(lunch_appetizer):
+        for index,lunch_appetizer in enumerate(lunch_appetizer):
+            print(index, ":", lunch_appetizer["name"], "-", lunch_appetizer["price"])
+    show_menu(lunch_appetizer)
 
-    b_food = random.sample(breakfast_food,1)
-    b_drink = random.sample(breakfast_drink,1)
+
+    l_food = random.sample(lunch_food,1)
+    l_drink = random.sample(lunch_drink,1)
+    l_appetizer = random.sample(lunch_appetizer,1)
     r_name = random.sample(name, 1)
     r_status = random.sample(status, 1)
-    for breakfast_food in b_food:
-        (breakfast_food["name"], breakfast_food["price"])
+    for lunch_food in l_food:
+        (lunch_food["name"], lunch_food["price"])
 
-    for breakfast_drink in b_drink:
-        (breakfast_drink["name"], breakfast_drink["price"])
+    for lunch_drink in l_drink:
+        (lunch_drink["name"], lunch_drink["price"])
 
     customers = [
         {"name" : r_name,
         "status" : r_status,
-        "order_f" : breakfast_food["name"],
-        "order_d" : breakfast_drink["name"],
-        "price_f" :  breakfast_food["price"],
-        "price_d" : breakfast_drink["price"],
+        "order_f" : lunch_food["name"],
+        "order_d" : lunch_drink["name"],
+        "price_f" : lunch_food["price"],
+        "price_d" : lunch_drink["price"],
         },
 
     ]
 
     for customer in customers:
-        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["status"])
+        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"],customer["order_d"], customer["price_d"], customer["status"])
     for index, customers in enumerate(customers):
-        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["status"])
+        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"],customer["order_d"], customer["price_d"], customer["status"])
+
+if selection == "dinner":
+    print("Dinner Menu: ")
+    print("Foods")
+    def show_menu(dinner_food):
+        for index, dinner_food in enumerate(dinner_food):
+            print(index, ":", dinner_food["name"], "-", dinner_food["price"])
+    show_menu(dinner_food)
+    print("Drinks")
+    def show_menu(dinner_appetizer):
+        for index, dinner_appetizer in enumerate(dinner_appetizer):
+            print(index, ":", dinner_appetizer["name"], "-", dinner_appetizer["price"])
+    show_menu(dinner_appetizer)
+    print("Appetizer")
+
+    def show_menu(dinner_dessert):
+        for index, dinner_dessert in enumerate(dinner_dessert):
+            print(index, ":", dinner_dessert["name"], "-", dinner_dessert["price"])
+    show_menu(dinner_appetizer)
+
+    l_food = random.sample(dinner_food,1)
+    l_appetizer = random.sample(dinner_appetizer,1)
+    l_dessert = random.sample(dinner_dessert,1)
+    r_name = random.sample(name, 1)
+    r_status = random.sample(status, 1)
+    for dinner_food in l_food:
+        (dinner_food["name"], dinner_food["price"])
+
+    for dinner_dessert in l_dessert:
+        (dinner_dessert["name"], dinner_dessert["price"])
+    
+    for dinner_appetizer in l_appetizer:
+        (dinner_appetizer["name"], dinner_appetizer["price"])
+
+    customers = [
+        {"name" : r_name,
+         "status" : r_status,
+         "order_f" : dinner_food["name"],
+         "order_a" : dinner_appetizer["name"],
+         "order_d" : dinner_dessert["name"],
+         "price_f" : dinner_food["price"],
+         "price_a" : dinner_appetizer["price"],
+         "price_d" : dinner_dessert["price"],
+        },
+
+    ]
+
+    for customer in customers:
+        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"], customer["order_d"], customer["price_d"],customer["status"])
+    for index, customers in enumerate(customers):
+        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"],  customer["order_a"], customer["price_a"], customer["order_d"], customer["price_d"], customer["status"])
 
 time.sleep(5)
 print("Hi")
