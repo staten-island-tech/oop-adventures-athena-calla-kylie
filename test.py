@@ -3,7 +3,8 @@ class menus():
         self.order_name = order_name
         self.description = description
         self.price = price
-
+import random
+import time
 Menus = [
     {"name": "Breakfast"},
     {"name": "Lunch"},
@@ -172,8 +173,7 @@ def show_menus(Menus):
 show_menus(Menus)
 print("You: 'Hi! Select your menu!'")
 print(". . .")
-import random
-menu_choice = ["breakfast"]
+menu_choice = ["breakfast", "lunch", "dinner"]
 selection = random.choice(menu_choice)
 print("Customer selects the", (selection), "menu")
 print(input("Show customers the menu..."))
@@ -191,29 +191,69 @@ if selection == "breakfast":
             print(index, ":", breakfast_drink["name"], "-", breakfast_drink["price"])
     show_menu(breakfast_drink)
 
-    import random
     b_food = random.sample(breakfast_food,1)
     b_drink = random.sample(breakfast_drink,1)
     r_name = random.sample(name, 1)
     r_status = random.sample(status, 1)
-for breakfast_food in b_food:
-    print("Customer orders", breakfast_food["name"], breakfast_food["price"])
+    for breakfast_food in b_food:
+        (breakfast_food["name"], breakfast_food["price"])
 
-for breakfast_drink in b_drink:
-    print("Customer orders", breakfast_drink["name"], breakfast_drink["price"])
+    for breakfast_drink in b_drink:
+        (breakfast_drink["name"], breakfast_drink["price"])
 
-status = [""]
+    customers = [
+        {"name" : r_name,
+        "status" : r_status,
+        "order_f" : breakfast_food["name"],
+        "order_d" : breakfast_drink["name"],
+        "price_f" :  breakfast_food["price"],
+        "price_d" : breakfast_drink["price"],
+        },
 
-customers = [
-    {"name" : r_name,
-     "status" : "",
-     "order_f" : breakfast_food["name"],
-     "order_d" : breakfast_drink["name"],
-     "price_f" :  breakfast_food["price"],
-     "price_d" : breakfast_drink["price"],
+    ]
 
-    }
-]
+    for customer in customers:
+        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["status"])
+    for index, customers in enumerate(customers):
+        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["status"])
+if selection == "lunch":
+    print("Lunch Menu: ")
+    print("Foods")
+    def show_menu(lunch):
+        for index, lunch_food in enumerate(lunch_food):
+            print(index, ":", lunch_food["name"], "-", lunch_food["price"])
+    show_menu(lunch_food)
+    print("Drinks")
+    def show_menu(breakfast_drink):
+        for index, breakfast_drink in enumerate(breakfast_drink):
+            print(index, ":", breakfast_drink["name"], "-", breakfast_drink["price"])
+    show_menu(breakfast_drink)
 
-for customer in customers:
-    print(customer["name"], customer["status"], customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"])
+    b_food = random.sample(breakfast_food,1)
+    b_drink = random.sample(breakfast_drink,1)
+    r_name = random.sample(name, 1)
+    r_status = random.sample(status, 1)
+    for breakfast_food in b_food:
+        (breakfast_food["name"], breakfast_food["price"])
+
+    for breakfast_drink in b_drink:
+        (breakfast_drink["name"], breakfast_drink["price"])
+
+    customers = [
+        {"name" : r_name,
+        "status" : r_status,
+        "order_f" : breakfast_food["name"],
+        "order_d" : breakfast_drink["name"],
+        "price_f" :  breakfast_food["price"],
+        "price_d" : breakfast_drink["price"],
+        },
+
+    ]
+
+    for customer in customers:
+        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["status"])
+    for index, customers in enumerate(customers):
+        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["status"])
+
+time.sleep(5)
+print("Hi")
