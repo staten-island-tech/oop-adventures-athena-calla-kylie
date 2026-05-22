@@ -15,162 +15,152 @@ Menus = [
 breakfast_food = [
         {"name": "Waffles - ",
         "price": "$6.99",
-        "description": "Three golden-brown waffles, with crispy exterior and fluffy interior",
-        "topping choice" : "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" "no toppings/sides"
+        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings/sides"
         },
 
         {"name": "Pancakes with",
         "price": "$6.50",
-        "description": "Three thick, fluffy golden-brown pancakes",
-        "topping choice": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles"
+        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings/sides"
         },
 
         {"name": "Bacon and Eggs - ",
         "price": "$6.99",
-        "description": "Crispy bacon with two eggs",
         "style": "scrambled" or "sunny side up"
         },
 
         {"name": "Breakfast Burrito",
         "price": "$9.99",
-        "description": "A flour tortilla filled with flavorful breakfast goods"
         }
     ]
 
 breakfast_drink = [
         {"name": "Hot Coffee - ",
         "price": "$1.99",
-        "description": "hot",
         "style": "espresso" "americano" "latte" or "cappuccino",
         },
 
         {"name": "Apple Juice",
         "price": "$0.99",
-        "description": "cold"},
+        },
                 
         {"name": "Orange Juice",
         "price": "$0.99",
-        "description": "cold"},
+        },
 
         {"name": "Milkshake - ",
         "price": "$3.99",
-        "description": "cold",
-        "style": "chocolate" "strawberry" or "vanilla"}
+        "style": "chocolate" "strawberry" or "vanilla"
+        }
     ]
 
 lunch_appetizer = [
         {"name": "Caesar Salad",
         "price": "$3.99",
-        "description": ""},
+        },
 
         {"name": "Sausage Bites",
         "price": "$3.50",
-        "description": ""},
+        },
 
         {"name": "Spinach Artichoke Dip",
         "price": "$3.50",
-        "description": ""},
+        },
 
         {"name": "Mozzarella Sticks",
         "price": "$3.99",
-        "description": ""}
+        }
         ]
 
 lunch_food = [
         {"name": "Macaroni and Cheese",
         "price": "$7.99",
-        "description": "Cheesy"
         },        
         
         {"name": "Burger",
         "price": "$8.99",
-        "description": ""
         },
 
         {"name": "Italian Grilled Cheese Sandwiches",
         "price": "$8.50",
-        "description": ""
         },
 
         {"name": "Chicken Caesar Pasta Salad",
         "price": "$7.99",
-        "description": ""
         },
     ]
     
 lunch_drink = [
     {"name": "Soda",
      "price": "$0.99",
-     "description": ""},
+    },
 
     {"name": "Iced Tea",
      "price": "$0.99",
-     "description": ""},
+    },
 
     {"name": "Lemonade",
      "price": "$0.99",
-     "description": ""},
+    },
     
     {"name": "Smoothie",
      "price": "$3.99",
-     "description": ""
-     "s"}
+     "style": "strawberry banana" "mixed berries" or "tropical mango"
+    }
     ]
 
 dinner_appetizer = [
     {"name": "Spinach and Artichoke Dip",
      "price": "$3.50",
-     "description": ""},
+    },
 
     {"name": "Sausage Bites",
      "price": "$3.50",
-     "description": ""},
+    },
 
     {"name": "Smoked Salmon",
      "price": "$4.99",
-     "description": ""},
+    },
 
     {"name": "Charcuterie Board",
      "price": "$7.99",
-     "description": ""}
+    }
     ]
 
 dinner_food = [
     {"name": "Spaghetti and Meatballs",
-     "price": "$8.99",
-     "description": ""},
+     "price": "$8.99"
+    },
     
     {"name": "Chicken Alfredo",
-     "price": "$9.99",
-     "description": ""},
+     "price": "$9.99"
+    },
 
     {"name": "Cast-Iron Steak - ",
      "price": "$14.99",
-     "description": "",
-     "style" :"rare" "medium-rare" "medium" "medium well" or "well done"},
+     "style" :"rare" "medium-rare" "medium" "medium well" or "well done"
+    },
 
     {"name": "Burger",
-     "price": "$8.99",
-     "description": ""}
+     "price": "$8.99"}
     ]
 
 
 dinner_dessert = [
     {"name": "Icecream",
      "price": "$3.99",
-     "description": ""},
+     "style": "chocolate" "strawberry" "vanilla" or "matcha"},
     
     {"name": "Molten Lava Cake",
      "price": "$7.99",
-     "description": ""},
+    },
 
     {"name": "Chocolate Chip Cookies",
      "price": "$4.99",
-     "description": ""},
+    },
 
     {"name": "Cheescake",
      "price": "$6.50",
-     "description": ""}
+    }
     ]
 
 import random
