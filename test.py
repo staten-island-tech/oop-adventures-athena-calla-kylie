@@ -1,10 +1,18 @@
+import random
+import time
 class menus():
     def __init__(self, order_name, description, price,):
         self.order_name = order_name
         self.description = description
         self.price = price
-import random
-import time
+class CustomerHappiness:
+    def __init__(self, name, status, happiness_level):
+        self.name = name
+        self.happiness_level = happiness_level
+        self.status = status
+    def add_or_subtract(self, amount):
+        self.happiness_level += amount
+
 Menus = [
     {"name": "Breakfast"},
     {"name": "Lunch"},
@@ -12,158 +20,154 @@ Menus = [
 ]
 
 breakfast_food = [
-        {"name": "Waffles",
-        "price": "$5.99",
-        "description": "Three golden-brown waffles, with crispy exterior and fluffy interior",
-        "topping choice" : "strawberries, blueberries, bananas, syrup, chocolate syrup, sprinkles"
-        },
-
-        {"name": "Pancakes",
-        "price": "$4.99",
-        "description": "Three thick, fluffy golden-brown pancakes",
-        "topping choice": "strawberries, blueberries, bananas, syrup, chocolate syrup, sprinkles"
-        },
-
-        {"name": "Bacon and Eggs",
+        {"name": "Waffles - ",
         "price": "$6.99",
-        "description": "Crispy bacon with two eggs",
-        "style": "scrambled or sunny side up"
+        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings/sides"
+        },
+
+        {"name": "Pancakes with",
+        "price": "$6.50",
+        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings/sides"
+        },
+
+        {"name": "Bacon and Eggs - ",
+        "price": "$6.99",
+        "style": "scrambled" or "sunny side up"
         },
 
         {"name": "Breakfast Burrito",
         "price": "$9.99",
-        "description": "A flour tortilla filled with flavorful breakfast goods"
         }
     ]
 
 breakfast_drink = [
-        {"name": "Hot Coffee",
-        "price": "$2.99",
-        "description": "hot",
-        "style": "espresso, americano, latte, or cappuccino",
+        {"name": "Hot Coffee - ",
+        "price": "$1.99",
+        "style": "espresso" "americano" "latte" or "cappuccino",
         },
 
         {"name": "Apple Juice",
-        "price": "$1.99",
-        "description": "cold"},
+        "price": "$0.99",
+        },
                 
         {"name": "Orange Juice",
-        "price": "$1.99",
-        "description": "cold"},
+        "price": "$0.99",
+        },
 
-        {"name": "Milkshake",
+        {"name": "Milkshake - ",
         "price": "$3.99",
-        "description": "cold",
-        "style": "chocolate, strawberry, or vanilla"}
+        "style": "chocolate" "strawberry" or "vanilla"
+        }
     ]
 
 lunch_appetizer = [
         {"name": "Caesar Salad",
-        "price": "",
-        "description": ""},
+        "price": "$3.99",
+        },
 
         {"name": "Sausage Bites",
-        "price": "",
-        "description": "Spinach Artichoke Dip"},
+        "price": "$3.50",
+        },
 
-        {"name": "Fried Zucchini",
-        "price": "",
-        "description": ""}
+        {"name": "Spinach Artichoke Dip",
+        "price": "$3.50",
+        },
+
+        {"name": "Mozzarella Sticks",
+        "price": "$3.99",
+        }
         ]
 
 lunch_food = [
         {"name": "Macaroni and Cheese",
         "price": "$7.99",
-        "description": "Cheesy"
         },        
         
         {"name": "Burger",
-        "price": "$5.99",
-        "description": ""
+        "price": "$8.99",
         },
 
         {"name": "Italian Grilled Cheese Sandwiches",
-        "price": "",
-        "description": ""
+        "price": "$8.50",
         },
 
         {"name": "Chicken Caesar Pasta Salad",
-        "price": "",
-        "description": ""
+        "price": "$7.99",
         },
     ]
     
 lunch_drink = [
     {"name": "Soda",
      "price": "$0.99",
-     "description": ""},
+    },
 
     {"name": "Iced Tea",
-     "price": "$",
-     "description": ""},
+     "price": "$0.99",
+    },
 
     {"name": "Lemonade",
-     "price": "$",
-     "description": ""},
+     "price": "$0.99",
+    },
     
     {"name": "Smoothie",
-     "price": "$",
-     "description": ""
-     "s"}
+     "price": "$3.99",
+     "style": "strawberry banana" "mixed berries" or "tropical mango"
+    }
     ]
 
 dinner_appetizer = [
     {"name": "Spinach and Artichoke Dip",
-     "price": "$",
-     "description": ""},
+     "price": "$3.50",
+    },
 
-    {"name": "",
-     "price": "$",
-     "description": ""},
+    {"name": "Sausage Bites",
+     "price": "$3.50",
+    },
 
-    {"name": "",
-     "price": "$",
-     "description": ""},
+    {"name": "Smoked Salmon",
+     "price": "$4.99",
+    },
 
-    {"name": "",
-     "price": "$",
-     "description": ""}
+    {"name": "Charcuterie Board",
+     "price": "$7.99",
+    }
     ]
 
 dinner_food = [
-    {"name": "",
-     "price": "$",
-     "description": ""},
+    {"name": "Spaghetti and Meatballs",
+     "price": "$8.99"
+    },
     
-    {"name": "",
-     "price": "$",
-     "description": ""},
+    {"name": "Chicken Alfredo",
+     "price": "$9.99"
+    },
 
-    {"name": "",
-     "price": "$",
-     "description": ""},
+    {"name": "Cast-Iron Steak - ",
+     "price": "$14.99",
+     "style" :"rare" "medium-rare" "medium" "medium well" or "well done"
+    },
 
-    {"name": "",
-     "price": "$",
-     "description": ""}
+    {"name": "Burger",
+     "price": "$8.99"}
     ]
 
+
 dinner_dessert = [
-    {"name": "",
-     "price": "$",
-     "description": ""},
+    {"name": "Icecream",
+     "price": "$3.99",
+     "style": "chocolate" "strawberry" "vanilla" or "matcha"},
     
-    {"name": "",
-     "price": "$",
-     "description": ""},
+    {"name": "Molten Lava Cake",
+     "price": "$7.99",
+    },
 
-    {"name": "",
-     "price": "$",
-     "description": ""},
+    {"name": "Chocolate Chip Cookies",
+     "price": "$4.99",
+    },
 
-    {"name": "",
-     "price": "$",
-     "description": ""}
+    {"name": "Cheescake",
+     "price": "$6.50",
+    }
     ]
 name = ["Abby", "Bob", "Calla", "Devi", "Eli", "Michael Francis Aaron Jake Diner", "George", "Henry", "Imogen", "Jonathan", "Katie", "Larry", "Michelle", "Nicole", "Opi", "Penguin"]
 status = ["SUPER Happy (100)", "Happy (99)", "Nonchalant (88)", "Annoyed (75)", "SUPER Annoyed (70)", "Mad (55)", "HUNGRY... (30)", "I AM GODZILLA (0)", "SO MAD IM ON FIRE!!!! (-10)"]
@@ -178,7 +182,7 @@ selection = random.choice(menu_choice)
 print("Customer selects the", (selection), "menu")
 print(input("Show customers the menu..."))
 
-""" if selection == "breakfast":
+if selection == "breakfast":
     print("Breakfast Menu: ")
     print("Foods")
     def show_menu(breakfast_food):
@@ -216,7 +220,7 @@ print(input("Show customers the menu..."))
         (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["status"])
     for index, customers in enumerate(customers):
         print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["status"])
-         """
+
 if selection == "lunch":
     print("Lunch Menu: ")
     print("Foods")
@@ -245,14 +249,19 @@ if selection == "lunch":
 
     for lunch_drink in l_drink:
         (lunch_drink["name"], lunch_drink["price"])
+    
+    for lunch_appetizer in l_appetizer:
+        (lunch_appetizer["name"], lunch_appetizer["price"])
 
     customers = [
         {"name" : r_name,
         "status" : r_status,
         "order_f" : lunch_food["name"],
         "order_d" : lunch_drink["name"],
+        "order_a" : lunch_appetizer["price"],
         "price_f" : lunch_food["price"],
         "price_d" : lunch_drink["price"],
+        "price_a" : lunch_appetizer["price"]
         },
 
     ]
@@ -313,5 +322,14 @@ if selection == "dinner":
     for index, customers in enumerate(customers):
         print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"],  customer["order_a"], customer["price_a"], customer["order_d"], customer["price_d"], customer["status"])
 
-time.sleep(5)
-print("Hi")
+start_time = time.time()
+answer = input("Input")
+end_time = time.time()
+if end_time - start_time > 5:
+    print("You have went overtime, customer happiness has decreased.")
+
+else:
+    print(":)")
+
+""" time.sleep(5)
+print("Hi") """
