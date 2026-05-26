@@ -74,7 +74,7 @@ class CustomerHappiness:
         if amount > 10:
        """      
 name = CustomerHappiness(customer["name"],customer["status"],10)
-print(name.__dict__)
+# print(name.__dict__)
 
 work = True
 earnings = []

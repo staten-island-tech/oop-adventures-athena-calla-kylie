@@ -70,7 +70,7 @@ customer_orders_day_one = [
     "price": 5000000.99,
     "tip": 0.00,
     "order": "everyting. give me everything.",
-    "instructions": "Heat up the mac anc cheese, plate, sprinke extra cheese on one of them.",
+    "instructions": "Heat up the mac anc cheese, plate, sprinkle extra cheese on one of them.",
     "status": "LIVID."
 },
     ]
