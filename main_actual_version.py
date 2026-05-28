@@ -72,7 +72,8 @@ Menus = [
 breakfast_food = [
         {"name": "Waffles - ",
         "price": "$6.99",
-        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings/sides"
+        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings/sides",
+        "instructions": "ghjbjb"
         },
 
         {"name": "Pancakes with",
@@ -83,6 +84,7 @@ breakfast_food = [
         {"name": "Bacon and Eggs - ",
         "price": "$6.99",
         "style": "scrambled" or "sunny side up"
+        "instructions"
         },
 
         {"name": "Breakfast Burrito",
@@ -261,7 +263,7 @@ if selection == "breakfast":
         "order_f" : breakfast_food["name"],
         "order_d" : breakfast_drink["name"],
         "price_f" :  breakfast_food["price"],
-        "price_d" : breakfast_drink["price"],
+        "price_d" : breakfast_drink["price"]
         },
 
     ]
