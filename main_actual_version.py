@@ -72,7 +72,8 @@ Menus = [
 breakfast_food = [
         {"name": "Waffles - ",
         "price": "$6.99",
-        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings/sides"
+        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings/sides",
+        "instructions": "ghjbjb"
         },
 
         {"name": "Pancakes with",
@@ -83,6 +84,7 @@ breakfast_food = [
         {"name": "Bacon and Eggs - ",
         "price": "$6.99",
         "style": "scrambled" or "sunny side up"
+        "instructions"
         },
 
         {"name": "Breakfast Burrito",
@@ -215,12 +217,13 @@ dinner_dessert = [
      "price": "$4.99",
     },
 
-    {"name": "Cheescake",
+    {"name": "Cheesecake",
      "price": "$6.50",
     }
     ]
 name = ["Abby", "Bob", "Calla", "Devi", "Eli", "Michael Francis Aaron Jake Diner", "George", "Henry", "Imogen", "Jonathan", "Katie", "Larry", "Michelle", "Nicole", "Opi", "Penguin"]
-status = ["SUPER Happy (100)", "Happy (99)", "Nonchalant (88)", "Annoyed (75)", "SUPER Annoyed (70)", "Mad (55)", "HUNGRY... (30)", "I AM GODZILLA (0)", "SO MAD IM ON FIRE!!!! (-10)"]
+happiness_level = random.randint(10,100)
+
 def show_menus(Menus):
     for index, Menus in enumerate(Menus):
         print(index, ":", Menus["name"])
@@ -248,7 +251,6 @@ if selection == "breakfast":
     b_food = random.sample(breakfast_food,1)
     b_drink = random.sample(breakfast_drink,1)
     r_name = random.sample(name, 1)
-    r_status = random.sample(status, 1)
     for breakfast_food in b_food:
         (breakfast_food["name"], breakfast_food["price"])
 
@@ -257,19 +259,19 @@ if selection == "breakfast":
 
     customers = [
         {"name" : r_name,
-        "status" : r_status,
+        "happiness_level" : happiness_level,
         "order_f" : breakfast_food["name"],
         "order_d" : breakfast_drink["name"],
         "price_f" :  breakfast_food["price"],
-        "price_d" : breakfast_drink["price"],
+        "price_d" : breakfast_drink["price"]
         },
 
     ]
 
     for customer in customers:
-        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["status"])
+        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["happiness_level"])
     for index, customers in enumerate(customers):
-        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"], customer["status"])
+        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], customer["order_d"], customer["price_d"],customer["happiness_level"])
 
 if selection == "lunch":
     print("Lunch Menu: ")
@@ -293,7 +295,6 @@ if selection == "lunch":
     l_drink = random.sample(lunch_drink,1)
     l_appetizer = random.sample(lunch_appetizer,1)
     r_name = random.sample(name, 1)
-    r_status = random.sample(status, 1)
     for lunch_food in l_food:
         (lunch_food["name"], lunch_food["price"])
 
@@ -305,7 +306,7 @@ if selection == "lunch":
 
     customers = [
         {"name" : r_name,
-        "status" : r_status,
+        "happiness_level" : happiness_level,
         "order_f" : lunch_food["name"],
         "order_d" : lunch_drink["name"],
         "order_a" : lunch_appetizer["price"],
@@ -317,9 +318,9 @@ if selection == "lunch":
     ]
 
     for customer in customers:
-        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"],customer["order_d"], customer["price_d"], customer["status"])
+        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"],customer["order_d"], customer["price_d"], customer["happiness_level"])
     for index, customers in enumerate(customers):
-        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"],customer["order_d"], customer["price_d"], customer["status"])
+        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"],customer["order_d"], customer["price_d"], customer["happiness_level"])
 
 if selection == "dinner":
     print("Dinner Menu: ")
@@ -344,7 +345,6 @@ if selection == "dinner":
     l_appetizer = random.sample(dinner_appetizer,1)
     l_dessert = random.sample(dinner_dessert,1)
     r_name = random.sample(name, 1)
-    r_status = random.sample(status, 1)
     for dinner_food in l_food:
         (dinner_food["name"], dinner_food["price"])
 
@@ -356,7 +356,7 @@ if selection == "dinner":
 
     customers = [
         {"name" : r_name,
-         "status" : r_status,
+        "happiness_level" : happiness_level,
          "order_f" : dinner_food["name"],
          "order_a" : dinner_appetizer["name"],
          "order_d" : dinner_dessert["name"],
@@ -368,18 +368,33 @@ if selection == "dinner":
     ]
 
     for customer in customers:
-        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"], customer["order_d"], customer["price_d"],customer["status"])
+        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"], customer["order_d"], customer["price_d"],customer["happiness_level"],
+)
     for index, customers in enumerate(customers):
-        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"],  customer["order_a"], customer["price_a"], customer["order_d"], customer["price_d"], customer["status"])
+        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"],  customer["order_a"], customer["price_a"], customer["order_d"], customer["price_d"], customer["happiness_level"])
+
+class CustomerHappiness:
+    def __init__(self, name, happiness_level):
+        self.name = name
+        self.happiness_level = happiness_level
+    def add_or_subtract(self, amount):
+        self.happiness_level += amount
+r_name = CustomerHappiness(customer["name"], happiness_level)
 
 start_time = time.time()
-answer = input("Input")
+answer = input("")
 end_time = time.time()
-if end_time - start_time > 5:
-    print("You have went overtime, customer happiness has decreased.")
-
-else:
-    print(":)")
+Serve = True
+while True:
+    if end_time - start_time > 3:
+        print("You have went overtime, customer happiness has decreased.")
+        r_name.add_or_subtract(-10)
+        print(r_name.__dict__)
+    else:
+        print(":)")
+    if happiness_level < 0:
+        print("Customer has left and stolen ${}")
+        BankAccount.deposit({})
 
 """ time.sleep(5)
 print("Hi") """
