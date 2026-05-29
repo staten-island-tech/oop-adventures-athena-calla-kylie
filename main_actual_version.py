@@ -406,6 +406,14 @@ while True:
     if count >= 12:
         Serve = False
     
+for index in enumerate(customer["instructions"]):
+    def i:
+    i = index
+
+    
+
+
+
 
 for earning in earnings:
     total += earning
