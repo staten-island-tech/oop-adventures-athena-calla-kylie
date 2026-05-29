@@ -45,7 +45,7 @@ breakfast_drink = [
         },
 
         {"name": "Apple Juice",
-        "price": "$0.99",
+        "price": "$0.99"
         },
                 
         {"name": "Orange Juice",
@@ -54,7 +54,8 @@ breakfast_drink = [
 
         {"name": "Milkshake - ",
         "price": "$3.99",
-        "style": "chocolate" "strawberry" or "vanilla"
+        "style": "chocolate" "strawberry" or "vanilla",
+        "instructions":["select ice cream flavor", "add milk", "blend until smooth"]
         }
     ]
 
