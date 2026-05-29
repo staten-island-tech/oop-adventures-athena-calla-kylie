@@ -223,6 +223,7 @@ dinner_dessert = [
     ]
 name = ["Abby", "Bob", "Calla", "Devi", "Eli", "Michael Francis Aaron Jake Diner", "George", "Henry", "Imogen", "Jonathan", "Katie", "Larry", "Michelle", "Nicole", "Opi", "Penguin"]
 happiness_level = random.randint(10,100)
+amount_steal = random.randint(1,20)
 
 def show_menus(Menus):
     for index, Menus in enumerate(Menus):
@@ -384,17 +385,33 @@ r_name = CustomerHappiness(customer["name"], happiness_level)
 start_time = time.time()
 answer = input("")
 end_time = time.time()
+earnings = []
+count = 0
+total = 0
 Serve = True
 while True:
+    count += 1
     if end_time - start_time > 3:
         print("You have went overtime, customer happiness has decreased.")
         r_name.add_or_subtract(-10)
         print(r_name.__dict__)
     else:
         print(":)")
-    if happiness_level < 0:
+        earnings.append(customer["price"])
+        break
+    if happiness_level > 0:
         print("Customer has left and stolen ${}")
         BankAccount.deposit({})
+    if count >= 12:
+        Serve = False
+
+for earning in earnings:
+    total += earning
+    rounded_total = round(total, 2)
+
+print(f"your total earnings you worked for today were: $${rounded_total}")
+print(f"your tip amount is:  $${rounded_total}")
+
 
 """ time.sleep(5)
 print("Hi") """
