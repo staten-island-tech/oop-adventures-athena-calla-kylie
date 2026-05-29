@@ -223,7 +223,7 @@ dinner_dessert = [
     ]
 name = ["Abby", "Bob", "Calla", "Devi", "Eli", "Michael Francis Aaron Jake Diner", "George", "Henry", "Imogen", "Jonathan", "Katie", "Larry", "Michelle", "Nicole", "Opi", "Penguin"]
 happiness_level = random.randint(10,100)
-amount_steal = random.randint(1,20)
+steal = random.randint(-20,-1)
 
 def show_menus(Menus):
     for index, Menus in enumerate(Menus):
@@ -399,11 +399,13 @@ while True:
         print(":)")
         earnings.append(customer["price"])
         break
-    if happiness_level > 0:
-        print("Customer has left and stolen ${}")
-        BankAccount.deposit({})
+    if happiness_level < 0:
+        print(f"Customer has left and stolen ${steal}")
+        BankAccount.deposit({steal})
+        break
     if count >= 12:
         Serve = False
+    
 
 for earning in earnings:
     total += earning
