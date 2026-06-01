@@ -224,6 +224,13 @@ dinner_dessert = [
 name = ["Abby", "Bob", "Calla", "Devi", "Eli", "Michael Francis Aaron Jake Diner", "George", "Henry", "Imogen", "Jonathan", "Katie", "Larry", "Michelle", "Nicole", "Opi", "Penguin"]
 happiness_level = random.randint(10,100)
 steal = random.randint(-20,-1)
+keys = list(dinner_dessert.keys())
+random.shuffle(keys)
+
+for key in keys:
+    items = dinner_dessert[key][:]
+    random.shuffle(items)
+    print(f"{key}: {items}")
 
 def show_menus(Menus):
     for index, Menus in enumerate(Menus):
@@ -392,7 +399,7 @@ Serve = True
 print("You have _ set amount of time to prepare the dish!")
 
 
-if answer
+""" if answer
 while True:
         
     count += 1
@@ -411,17 +418,17 @@ while True:
         break
     if count >= 5:
         Serve = False
-    
+     """
 """ for index in enumerate(customer["instructions"]):
     def i:
     i = index
  """
-for earning in earnings:
+""" for earning in earnings:
     total += earning
     rounded_total = round(total, 2)
 print(f"your total earnings you worked for today were: $${rounded_total}")
 print(f"your tip amount is:  $${rounded_total}")
-
+ """
 
 """ time.sleep(5)
 print("Hi") """
