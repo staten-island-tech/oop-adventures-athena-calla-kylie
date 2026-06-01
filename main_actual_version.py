@@ -383,7 +383,7 @@ class CustomerHappiness:
 r_name = CustomerHappiness(customer["name"], happiness_level)
 
 start_time = time.time()
-answer = input("")
+answer = input("Enter the instructions in order.")
 end_time = time.time()
 earnings = []
 count = 0
