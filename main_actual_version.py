@@ -389,36 +389,34 @@ earnings = []
 count = 0
 total = 0
 Serve = True
+print("You have _ set amount of time to prepare the dish!")
+
 while True:
+    
     count += 1
-    if end_time - start_time > 3:
+    if end_time - start_time > 5:
         print("You have went overtime, customer happiness has decreased.")
         r_name.add_or_subtract(-10)
         print(r_name.__dict__)
-    else:
-        print(":)")
-        earnings.append(customer["price"])
+        if happiness_level > 0:
+            print(f"Customer has left and stolen ${steal}")
+            BankAccount.deposit({steal})
+            break
+
+    elif answer == correct_a:
+        print("Congrats you have prepare the dish!")
+        earnings.append(customer["price_a"])
         break
-    if happiness_level < 0:
-        print(f"Customer has left and stolen ${steal}")
-        BankAccount.deposit({steal})
-        break
-    if count >= 12:
+    if count >= 5:
         Serve = False
     
-for index in enumerate(customer["instructions"]):
+""" for index in enumerate(customer["instructions"]):
     def i:
     i = index
-
-    
-
-
-
-
+ """
 for earning in earnings:
     total += earning
     rounded_total = round(total, 2)
-
 print(f"your total earnings you worked for today were: $${rounded_total}")
 print(f"your tip amount is:  $${rounded_total}")
 
