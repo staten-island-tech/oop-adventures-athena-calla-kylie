@@ -391,8 +391,10 @@ total = 0
 Serve = True
 print("You have _ set amount of time to prepare the dish!")
 
+
+if answer
 while True:
-    
+        
     count += 1
     if end_time - start_time > 5:
         print("You have went overtime, customer happiness has decreased.")
