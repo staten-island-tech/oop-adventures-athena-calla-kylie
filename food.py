@@ -62,28 +62,34 @@ breakfast_drink = [
 lunch_appetizer = [
         {"name": "Caesar Salad",
         "price": "$3.99",
+        "instructions": ["add toppings, aka tomatoes and croutons on the iceburg lettuce", "pour dressing over the salad"] 
         },
 
         {"name": "Sausage Bites",
         "price": "$3.50",
+        "instructions": ["cut the sausage into small pieces", "preheat oven", "bake the sausage bites for ten minutes at 450", "serve hot"] 
         },
 
         {"name": "Spinach Artichoke Dip",
         "price": "$3.50",
+        "instructions": ["prepare cream cheese, sour cream, and mayonnaise", "stir", "add the greens and artichokes"] 
         },
 
         {"name": "Mozzarella Sticks",
         "price": "$3.99",
+        "instructions": ["preheat oven to 400", "Bread mozerella sticks in bread crumbs and egg", "bake at 400 for 12 minutes, or until crispy"]
         }
         ]
 
 lunch_food = [
         {"name": "Macaroni and Cheese",
         "price": "$7.99",
+        "instructions": ["Add boiled pasta and cheese to a baking dish", "sprinke cheddar on top and add cream cheese to the mixture", "top with customer's choice"]
         },        
         
         {"name": "Burger",
         "price": "$8.99",
+        "instructions": ["       ]   
         },
 
         {"name": "Italian Grilled Cheese Sandwiches",
