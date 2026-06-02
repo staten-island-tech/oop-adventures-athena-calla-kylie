@@ -397,17 +397,17 @@ earnings = []
 count = 0
 total = 0
 Serve = True
-if answer == breakfast_food("instructions") and end_time >= 0:
+if answer == breakfast_food["instructions"] and end_time >= 0:
     print("YAY, you get the tip money and no customer happiness is lost!")
 else:
     print("oops, serve the next customer to earn your money back.")
 
-    if answer == lunch_food("instructions") and end_time >= 0:
+    if answer == lunch_food["instructions"] and end_time >= 0:
         print("YAY, you get the tip money and no customer happiness is lost!")
     else:
         print("oops, serve the next customer to earn your money back.")
 
-if answer == dinner_food("instructions") and end_time >= 0:
+if answer == dinner_food["instructions"] and end_time >= 0:
     print("YAY, you get the tip money and no customer happiness is lost!")
 else:
     print("oops, serve the next customer to earn your money back.")
