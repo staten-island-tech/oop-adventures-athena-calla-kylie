@@ -72,23 +72,25 @@ Menus = [
 breakfast_food = [
         {"name": "Waffles - ",
         "price": "$6.99",
-        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings/sides",
-        "instructions": "ghjbjb"
+        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings",
+        "instructions": ["create batter", "preheat waffle iron", "pour batter into machine", "take the waffle out", "select toppings if necessary"]
         },
 
         {"name": "Pancakes with",
         "price": "$6.50",
-        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings/sides"
+        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings",
+        "instructions": ["create batter", "preheat the pan", "pour into pan", "flip when underside is golden brown", "take the pancake out", "select toppings if necessary"]
         },
 
         {"name": "Bacon and Eggs - ",
         "price": "$6.99",
-        "style": "scrambled" or "sunny side up"
-        "instructions"
+        "style": "scrambled" or "sunny side up",
+        "instructions": ["grab bacon", "take out when fully cooked", "cook the eggs"]
         },
 
         {"name": "Breakfast Burrito",
         "price": "$9.99",
+        "instructions": ["lay out tortilla", "place ingredients inside", "wrap it up"]
         }
     ]
 
@@ -96,10 +98,11 @@ breakfast_drink = [
         {"name": "Hot Coffee - ",
         "price": "$1.99",
         "style": "espresso" "americano" "latte" or "cappuccino",
+        "instructions": ["place paper filter and rinse with hot water", "grind coffee beans", "add the grounds into filter", "brew coffee"]
         },
 
         {"name": "Apple Juice",
-        "price": "$0.99",
+        "price": "$0.99"
         },
                 
         {"name": "Orange Juice",
@@ -108,45 +111,53 @@ breakfast_drink = [
 
         {"name": "Milkshake - ",
         "price": "$3.99",
-        "style": "chocolate" "strawberry" or "vanilla"
+        "style": "chocolate" "strawberry" or "vanilla",
+        "instructions":["select ice cream flavor", "add milk", "blend until smooth"]
         }
     ]
 
 lunch_appetizer = [
         {"name": "Caesar Salad",
         "price": "$3.99",
+        "instructions": ["add toppings, aka tomatoes and croutons on the iceburg lettuce", "pour dressing over the salad"] 
         },
 
         {"name": "Sausage Bites",
         "price": "$3.50",
+        "instructions": ["cut the sausage into small pieces", "preheat oven", "bake the sausage bites for ten minutes at 450", "serve hot"] 
         },
 
         {"name": "Spinach Artichoke Dip",
         "price": "$3.50",
+        "instructions": ["prepare cream cheese, sour cream, and mayonnaise", "stir", "add the greens and artichokes"] 
         },
 
         {"name": "Mozzarella Sticks",
         "price": "$3.99",
+        "instructions": ["preheat oven to 400", "Bread mozerella sticks in bread crumbs and egg", "bake at 400 for 12 minutes, or until crispy"]
         }
         ]
 
 lunch_food = [
         {"name": "Macaroni and Cheese",
         "price": "$7.99",
-        "instructions": "test Test"
+        "instructions": ["Add boiled pasta and cheese to a baking dish", "sprinke cheddar on top and add cream cheese to the mixture", "top with customer's choice"]
         },        
         
         {"name": "Burger",
         "price": "$8.99",
+        "instructions": ["fry bread", "cook the meat and neccesary ingredients", "sandwich patties, tomato, lettuce, onions, cheese onto bread"]   
         },
 
         {"name": "Italian Grilled Cheese Sandwiches",
         "price": "$8.50",
+        "instructions":[""]
         },
 
         {"name": "Chicken Caesar Pasta Salad",
         "price": "$7.99",
-        },
+        "instructions":
+        }
     ]
     
 lunch_drink = [
@@ -164,64 +175,80 @@ lunch_drink = [
     
     {"name": "Smoothie",
      "price": "$3.99",
-     "style": "strawberry banana" "mixed berries" or "tropical mango"
+     "style": "strawberry banana" "mixed berries" or "tropical mango",
+     "instructions": ["select fruits", "add milk", "blend until smooth"]
     }
     ]
 
 dinner_appetizer = [
     {"name": "Spinach and Artichoke Dip",
      "price": "$3.50",
+     "instructions": ["prepare cream cheese, sour cream, and mayonnaise", "stir", "add the greens and artichokes"]
     },
 
     {"name": "Sausage Bites",
      "price": "$3.50",
+     "instructions": ["cut the sausage intop small pieces", "preheat oven", "bake the sausage bites"]
     },
 
     {"name": "Smoked Salmon",
      "price": "$4.99",
+     "instructions": ["prep salmon(remove bones)", "coat with sea salt and brown sugar", "place in fridge until firm", "smoke it", "place onto crackers with cream cheese"]
     },
 
     {"name": "Charcuterie Board",
      "price": "$7.99",
+     "instructions": ["grab items", "separate into 'islands'", "decorate neatly"]
     }
     ]
 
 dinner_food = [
     {"name": "Spaghetti and Meatballs",
-     "price": "$8.99"
+     "price": "$8.99",
+     "instructions": ["combine ingredients and mix gently", "roll into balls", "cook meatballs in the pan until brown", "cook spaghetti in separate pot", "transfer onto plate"]
     },
     
     {"name": "Chicken Alfredo",
-     "price": "$9.99"
+     "price": "$9.99",
+     "instructions": ["boil pasta", "cook seasoned chicken", "make alfredo sauce", "combine pasta and sauce and lay sliced chicken on top"]
     },
 
     {"name": "Cast-Iron Steak - ",
      "price": "$14.99",
-     "style" :"rare" "medium-rare" "medium" "medium well" or "well done"
+     "style" :"rare" "medium-rare" "medium" "medium well" or "well done",
+     "instructions": ["pat and season steak", "lay steak onto pan", "flip", "baste with butter", "place onto plate and pour remaining pan juices"]
     },
 
     {"name": "Burger",
-     "price": "$8.99"}
+     "price": "$8.99",
+     "instructions": ["fry bread", "cook the meat and neccesary ingredients", "sandwich patties, tomato, lettuce, onions, cheese onto bread"]
+     }
     ]
 
 
 dinner_dessert = [
     {"name": "Icecream",
      "price": "$3.99",
-     "style": "chocolate" "strawberry" "vanilla" or "matcha"},
+     "style": "chocolate" "strawberry" "vanilla" or "matcha",
+     "instructions": ["select icecream flavor", "scoop icecream"]
+     },
     
     {"name": "Molten Lava Cake",
      "price": "$7.99",
+     "instructions":["butter and dust muffin tins", "melt and create chocolate mixture", "bake", "plate it and sprinkle with powder"]
     },
 
     {"name": "Chocolate Chip Cookies",
      "price": "$4.99",
+     "instructions":["prep equipment and oven", "mix dry ingredients", "add wet ingredients", "spread onto baking sheet", "bake"]
     },
 
-    {"name": "Cheesecake",
+    {"name": "Cheescake",
      "price": "$6.50",
+     "instructions":["create crust", "prepare the filling", "bake in warm water bath", "bake in oven", "refrigerate"]
     }
     ]
+
 name = ["Abby", "Bob", "Calla", "Devi", "Eli", "Michael Francis Aaron Jake Diner", "George", "Henry", "Imogen", "Jonathan", "Katie", "Larry", "Michelle", "Nicole", "Opi", "Penguin"]
 happiness_level = random.randint(10,100)
 steal = random.randint(-20,-1)
