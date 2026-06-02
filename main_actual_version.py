@@ -303,6 +303,10 @@ if selection == "lunch":
     l_drink = random.sample(lunch_drink,1)
     l_appetizer = random.sample(lunch_appetizer,1)
     r_name = random.sample(name, 1)
+
+    import random
+    random.shuffle(instructions(l_food))
+    
     for lunch_food in l_food:
         (lunch_food["name"], lunch_food["price"])
 
