@@ -133,6 +133,7 @@ lunch_appetizer = [
 lunch_food = [
         {"name": "Macaroni and Cheese",
         "price": "$7.99",
+        "instructions": "test Test"
         },        
         
         {"name": "Burger",
@@ -224,13 +225,12 @@ dinner_dessert = [
 name = ["Abby", "Bob", "Calla", "Devi", "Eli", "Michael Francis Aaron Jake Diner", "George", "Henry", "Imogen", "Jonathan", "Katie", "Larry", "Michelle", "Nicole", "Opi", "Penguin"]
 happiness_level = random.randint(10,100)
 steal = random.randint(-20,-1)
-keys = list(dinner_dessert.keys())
-random.shuffle(keys)
 
+""" 
 for key in keys:
     items = dinner_dessert[key][:]
     random.shuffle(items)
-    print(f"{key}: {items}")
+    print(f"{key}: {items}") """
 
 def show_menus(Menus):
     for index, Menus in enumerate(Menus):
@@ -303,9 +303,6 @@ if selection == "lunch":
     l_drink = random.sample(lunch_drink,1)
     l_appetizer = random.sample(lunch_appetizer,1)
     r_name = random.sample(name, 1)
-
-    import random
-    random.shuffle(instructions(l_food))
     
     for lunch_food in l_food:
         (lunch_food["name"], lunch_food["price"])
@@ -400,7 +397,21 @@ earnings = []
 count = 0
 total = 0
 Serve = True
-print("You have _ set amount of time to prepare the dish!")
+if answer == breakfast_food("instructions") and end_time >= 0:
+    print("YAY, you get the tip money and no customer happiness is lost!")
+else:
+    print("oops, serve the next customer to earn your money back.")
+
+    if answer == lunch_food("instructions") and end_time >= 0:
+        print("YAY, you get the tip money and no customer happiness is lost!")
+    else:
+        print("oops, serve the next customer to earn your money back.")
+
+if answer == dinner_food("instructions") and end_time >= 0:
+    print("YAY, you get the tip money and no customer happiness is lost!")
+else:
+    print("oops, serve the next customer to earn your money back.")
+
 
 
 """ if answer
@@ -436,3 +447,4 @@ print(f"your tip amount is:  $${rounded_total}")
 
 """ time.sleep(5)
 print("Hi") """
+
