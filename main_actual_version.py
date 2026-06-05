@@ -149,17 +149,16 @@ lunch_food = [
         "instructions": ["fry bread", "cook the meat and neccesary ingredients", "sandwich patties, tomato, lettuce, onions, cheese onto bread"]   
         },
 
-        {"name": "Grilled Cheese Sandwiches",
+        {"name": "Italian Grilled Cheese Sandwiches",
         "price": "$8.50",
-        "instructions":["place bread on skillet", "spread butter on one slice", "top with sliced cheese on another", "cook until golden brown and melted"]
+        "instructions":[""]
         },
 
         {"name": "Chicken Caesar Pasta Salad",
         "price": "$7.99",
-        "instructions": ["cook pasta", "assemble salad", "add caesar dressing", "toss until evenly coated"]
+        "instructions":
         }
     ]
-
     
 lunch_drink = [
     {"name": "Soda",
