@@ -1,3 +1,4 @@
+import random
 breakfast_food = [
         {"name": "Waffles - ",
         "price": "$6.99",
@@ -23,15 +24,36 @@ breakfast_food = [
         }
 ]
 
-menu_instruct = breakfast_food[0]["name"]["instructions"]
+breakfast_drink = [
+        {"name": "Hot Coffee - ",
+        "price": "$1.99",
+        "style": "espresso" "americano" "latte" or "cappuccino",
+        "instructions": ["place paper filter and rinse with hot water", "grind coffee beans", "add the grounds into filter", "brew coffee"]
+        },
 
-""" for food_dict in breakfast_food:
-    instruction_info = food_dict.get(breakfast_food[instructions], {})
-    if instructions in instruction_info:
-        print(instruction_info[instructions]) """
+        {"name": "Apple Juice",
+        "price": "$0.99"
+        },
+                
+        {"name": "Orange Juice",
+        "price": "$0.99",
+        },
 
-""" for dictionary in breakfast_food:
-    for key, value in dictionary.items():
-        print(key, value)
-for menu, info in breakfast_food.items():
-    print(info["name"]["instructions"]) """
+        {"name": "Milkshake - ",
+        "price": "$3.99",
+        "style": "chocolate" "strawberry" or "vanilla",
+        "instructions":["select ice cream flavor", "add milk", "blend until smooth"]
+        }
+    ]
+
+instructionsbf = breakfast_food[0]
+menu_instructbf = breakfast_food[0]["instructions"]
+random.shuffle(menu_instructbf)
+print(menu_instructbf)
+
+instructionsbd = breakfast_drink[0]
+menu_instructbd = breakfast_drink[0]["instructions"]
+random.shuffle(menu_instructbd)
+print(menu_instructbd)
+
+
