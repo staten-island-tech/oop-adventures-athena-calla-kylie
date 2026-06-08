@@ -149,14 +149,14 @@ lunch_food = [
         "instructions": ["fry bread", "cook the meat and neccesary ingredients", "sandwich patties, tomato, lettuce, onions, cheese onto bread"]   
         },
 
-        {"name": "Italian Grilled Cheese Sandwiches",
+        {"name": "Grilled Cheese Sandwiches",
         "price": "$8.50",
-        "instructions":[""]
+        "instructions":["place bread on skillet", "spread butter on one slice", "top with sliced cheese on another", "cook until golden brown and melted"]
         },
 
         {"name": "Chicken Caesar Pasta Salad",
         "price": "$7.99",
-        "instructions":
+        "instructions": ["cook pasta", "assemble salad", "add caesar dressing", "toss until evenly coated"]
         }
     ]
     
@@ -415,7 +415,7 @@ class CustomerHappiness:
         self.happiness_level = happiness_level
     def add_or_subtract(self, amount):
         self.happiness_level += amount
-r_name = CustomerHappiness(customer["name"], happiness_level)
+""" r_name = CustomerHappiness(customer["name"], happiness_level)
 
 start_time = time.time()
 answer = input("Enter the instructions in order.")
@@ -437,7 +437,7 @@ else:
 if answer == dinner_food["instructions"] and end_time >= 0:
     print("YAY, you get the tip money and no customer happiness is lost!")
 else:
-    print("oops, serve the next customer to earn your money back.")
+    print("oops, serve the next customer to earn your money back.") """
 
 
 
