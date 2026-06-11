@@ -1,3 +1,5 @@
+if selection == "dinner":    print("Dinner Menu: ")    print("Foods")    def show_menu(dinner_food):        for index, dinner_food in enumerate(dinner_food):            print(index, ":", dinner_food["name"], "-", dinner_food["price"])    show_menu(dinner_food)    print("Drinks")    def show_menu(dinner_appetizer):        for index, dinner_appetizer in enumerate(dinner_appetizer):            print(index, ":", dinner_appetizer["name"], "-", dinner_appetizer["price"])    show_menu(dinner_appetizer)    print("Appetizer")
+    def show_menu(dinner_dessert):        for index, dinner_dessert in enumerate(dinner_dessert):            print(index, ":", dinner_dessert["name"], "-", dinner_dessert["price"])    show_menu(dinner_appetizer)    d_food = random.choice(lunch_food,1)    l_appetizer = random.sample(dinner_appetizer,1)    l_dessert = random.sample(dinner_dessert,1)    r_name = random.sample(name, 1)    for dinner_food in l_food:        (dinner_food["name"], dinner_food["price"])
 import random
 import time
 
