@@ -1,3 +1,10 @@
+if selection == "lunch":    print("Lunch Menu: ")    print("Foods")    def show_menu(lunch_food):        for index, lunch_food in enumerate(lunch_food):            print(index, ":", lunch_food["name"], "-", lunch_food["price"])    show_menu(lunch_food)    l_food = random.choice(lunch_food,1)    l_drink = random.sample(lunch_drink,1)    l_appetizer = random.sample(lunch_appetizer,1)    r_name = random.sample(name, 1)        for lunch_food in l_food:        (lunch_food["name"], lunch_food["price"])
+    for lunch_drink in l_drink:        (lunch_drink["name"], lunch_drink["price"])        for lunch_appetizer in l_appetizer:        (lunch_appetizer["name"], lunch_appetizer["price"])
+    customers = [        {"name" : r_name,        "happiness_level" : happiness_level,        "order_f" : lunch_food["name"],        "order_d" : lunch_drink["name"],        "order_a" : lunch_appetizer["price"],        "price_f" : lunch_food["price"],        "price_d" : lunch_drink["price"],        "price_a" : lunch_appetizer["price"]        },
+    ]
+    for customer in customers:        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"],customer["order_d"], customer["price_d"], customer["happiness_level"])    for index, customers in enumerate(customers):        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"],customer["order_d"], customer["price_d"], customer["happiness_level"])
+    correct_order = l_food["instructions"]    shuffled = correct_order[:]    random.shuffle(shuffled)    print(f"Your item: {l_food['name']}  ({l_food['price']})")
+
 import random
 breakfast_food = [
         {"name": "Waffles - ",
