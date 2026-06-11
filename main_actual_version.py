@@ -18,7 +18,7 @@ user_name = input("Hello! Please enter your name:")
 print(f"Welcome to {user_name}'s Resturaunt! You are now a server at rank {1} with {"ZERO"} customers served so far.")
 print("If you need instructions on how to play, write 'Yes'. If you are ready to play now, write 'No' in the box below.")
 
-instructions = input("Instructions? ::")
+instructions = input("Instructions?:")
 
 if instructions == ("Yes"):
         print(f"Hello my dear {user_name}!! I do hope your day is going well. Are you ready to master the restauraunt business? Or maybe not... Maybe you aren't ready. Are you?")
@@ -72,21 +72,18 @@ Menus = [
 ]
 
 breakfast_food = [
-        {"name": "Waffles - ",
+        {"name": "Waffles",
         "price": "$6.99",
-        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings",
         "instructions": ["create batter", "preheat waffle iron", "pour batter into machine", "take the waffle out", "select toppings if necessary"]
         },
 
-        {"name": "Pancakes with",
+        {"name": "Pancakes",
         "price": "$6.50",
-        "style": "strawberries" "blueberries" "bananas" "syrup" "chocolate syrup" "sprinkles" or "no toppings",
         "instructions": ["create batter", "preheat the pan", "pour into pan", "flip when underside is golden brown", "take the pancake out", "select toppings if necessary"]
         },
 
-        {"name": "Bacon and Eggs - ",
+        {"name": "Bacon and Eggs ",
         "price": "$6.99",
-        "style": "scrambled" or "sunny side up",
         "instructions": ["grab bacon", "take out when fully cooked", "cook the eggs"]
         },
 
@@ -99,7 +96,6 @@ breakfast_food = [
 breakfast_drink = [
         {"name": "Hot Coffee - ",
         "price": "$1.99",
-        "style": "espresso" "americano" "latte" or "cappuccino",
         "instructions": ["place paper filter and rinse with hot water", "grind coffee beans", "add the grounds into filter", "brew coffee"]
         },
 
@@ -217,7 +213,6 @@ dinner_food = [
 
     {"name": "Cast-Iron Steak - ",
      "price": "$14.99",
-     "style" :"rare" "medium-rare" "medium" "medium well" or "well done",
      "instructions": ["pat and season steak", "lay steak onto pan", "flip", "baste with butter", "place onto plate and pour remaining pan juices"]
     },
 
@@ -231,7 +226,6 @@ dinner_food = [
 dinner_dessert = [
     {"name": "Icecream",
      "price": "$3.99",
-     "style": "chocolate" "strawberry" "vanilla" or "matcha",
      "instructions": ["select icecream flavor", "scoop icecream"]
      },
     
@@ -270,7 +264,8 @@ print(". . .")
 menu_choice = ["breakfast", "lunch", "dinner"]
 selection = random.choice(menu_choice)
 print("Customer selects the", (selection), "menu")
-print(input("Show customers the menu..."))
+time.sleep(2)
+print("Show customers the menu...")
 
 if selection == "breakfast":
     print("Breakfast Menu: ")
@@ -356,9 +351,9 @@ if selection == "lunch":
     ]
 
     for customer in customers:
-        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"],customer["order_d"], customer["price_d"], customer["happiness_level"])
+        (customer["name"],"orders", customer["order_f"], customer["price_f"],",", customer["order_a"], customer["price_a"],",", customer["order_d"], customer["price_d"], customer["happiness_level"])
     for index, customers in enumerate(customers):
-        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"],customer["order_d"], customer["price_d"], customer["happiness_level"])
+        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"],",", customer["order_a"], customer["price_a"],",", customer["order_d"], customer["price_d"], customer["happiness_level"])
 
 if selection == "dinner":
     print("Dinner Menu: ")
@@ -406,10 +401,10 @@ if selection == "dinner":
     ]
 
     for customer in customers:
-        (customer["name"],"orders", customer["order_f"], customer["price_f"], customer["order_a"], customer["price_a"], customer["order_d"], customer["price_d"],customer["happiness_level"],
+        (customer["name"],"orders", customer["order_f"], customer["price_f"], ",", customer["order_a"], customer["price_a"], ",", customer["order_d"], customer["price_d"]," - Happiness Level:", customer["happiness_level"],
 )
     for index, customers in enumerate(customers):
-        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"],  customer["order_a"], customer["price_a"], customer["order_d"], customer["price_d"], customer["happiness_level"])
+        print(customer["name"],"Customer orders", customer["order_f"], customer["price_f"], ",", customer["order_a"], customer["price_a"], customer["order_d"],  customer["price_d"], " - Happiness Level:", customer["happiness_level"])
 
 class CustomerHappiness:
     def __init__(self, name, happiness_level):
