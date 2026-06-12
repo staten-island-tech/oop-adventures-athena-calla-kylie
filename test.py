@@ -318,13 +318,15 @@ class BankAccount(Server):
         print(f"{self.name} has ${self.__balance}")
 name = BankAccount(user_name, 100) 
 
-time.sleep(1)
+time.sleep(2)
 work = True
 earnings = []
 total_money = 0
 count = 0
 print("You are able to serve 6 customers a day, good luck!")
+time.sleep(2)
 print("Enter the instructions by numbers seperated by commas.")
+time.sleep(2)
 
 while work:
     count += 1
@@ -349,7 +351,7 @@ while work:
 
     for i, step in enumerate(shuffled, 1):
         print(f"{i}. {step}")
-    user_input = input("Rearrange the list of instructions.")
+    user_input = input("Rearrange the list of instructions. Separate by commas : ")
     order = [int(x.strip()) for x in user_input.split(",")]
     sequence = [shuffled[i - 1] for i in order]
     if sequence == correct_order:
