@@ -1,3 +1,4 @@
+import time
 import random
 class server_profile:
         def __init__(self, name, gender, workdays):
@@ -241,6 +242,7 @@ menu_choice = ["breakfast", "lunch", "dinner"]
 selection = random.choice(menu_choice)
 print("Customer selects the", (selection), "menu")
 print("Show customers the menu...")
+time.sleep(1)
 
 if selection == "breakfast":
     print("Breakfast Menu: ")
@@ -316,11 +318,14 @@ class BankAccount(Server):
         print(f"{self.name} has ${self.__balance}")
 name = BankAccount(user_name, 100) 
 
+time.sleep(1)
 work = True
 earnings = []
 total_money = 0
 count = 0
 print("You are able to serve 6 customers a day, good luck!")
+print("Enter the instructions by numbers seperated by commas.")
+
 while work:
     count += 1
     if selection == "breakfast":
