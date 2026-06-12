@@ -358,7 +358,7 @@ while work:
             print("Incorrect.")
             print("The customer has left!")
 
-    if count > 0:
+    if count > 5:
         work = False
 for earning in earnings:
     total_money += float(earning)
