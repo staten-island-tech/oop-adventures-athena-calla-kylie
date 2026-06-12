@@ -27,7 +27,6 @@ if instructions == ("Yes"):
         finalready = input("Ready?")
         print("GAME START!!")
 else: print("GAME START!!")
-
 name = Server(user_name, 100)
 print(name.__dict__)
 
