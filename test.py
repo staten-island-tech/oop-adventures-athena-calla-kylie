@@ -323,39 +323,37 @@ total_money = 0
 count = 0
 print("You are able to serve 6 customers a day, good luck!")
 while work:
-    while work:
-        count += 1
-        if selection == "breakfast":
-            item = random.choice(breakfast_food)
-            item_2 = random.choice(breakfast_drink)
-        elif selection == "lunch":
-            item = random.choice(lunch_food)
-            item_2 = random.choice(lunch_drink)
-            item_3 = random.choice(lunch_appetizer)
-        else:
-            item = random.choice(dinner_food)
-            item_2 = random.choice(dinner_appetizer)
-            item_3 = random.choice(dinner_dessert)
-        correct_order = item["instructions"]
-        shuffled = correct_order[:]
-        random.shuffle(shuffled)
-        print(f"Customer order: {item["name"]} $({item["price"]})")
-        print(f"Customer order: {item_2["name"]} $({item_2["price"]})")
+    count += 1
+    if selection == "breakfast":
+        item = random.choice(breakfast_food)
+        item_2 = random.choice(breakfast_drink)
+    elif selection == "lunch":
+        item = random.choice(lunch_food)
+        item_2 = random.choice(lunch_drink)
+        item_3 = random.choice(lunch_appetizer)
+    else:
+        item = random.choice(dinner_food)
+        item_2 = random.choice(dinner_appetizer)
+        item_3 = random.choice(dinner_dessert)
+    correct_order = item["instructions"]
+    shuffled = correct_order[:]
+    random.shuffle(shuffled)
+    print(f"Customer order: {item["name"]} $({item["price"]})")
+    print(f"Customer order: {item_2["name"]} $({item_2["price"]})")
+    if selection != "breakfast":
+        print(f"Customer order: {item_3["name"]} $({item_3["price"]})")
+
+    for i, step in enumerate(shuffled, 1):
+        print(f"{i}. {step}")
+    user_input = input("Rearrange the list of instructions.")
+    order = [int(x.strip()) for x in user_input.split(",")]
+    sequence = [shuffled[i - 1] for i in order]
+    if sequence == correct_order:
+        print("Correct!")
+        earnings.append(item["price"])
+        earnings.append(item_2["price"])
         if selection != "breakfast":
-            print(f"Customer order: {item_3["name"]} $({item_3["price"]})")
-
-
-        for i, step in enumerate(shuffled, 1):
-            print(f"{i}. {step}")
-        user_input = input("Rearrange the list of instructions.")
-        order = [int(x.strip()) for x in user_input.split(",")]
-        sequence = [shuffled[i - 1] for i in order]
-        if sequence == correct_order:
-            print("Correct!")
-            earnings.append(item["price"])
-            earnings.append(item_2["price"])
-            if selection != "breakfast":
-                earnings.append(item_3["price"])
+            earnings.append(item_3["price"])
         else:
             print("Incorrect.")
             print("The customer has left!")
@@ -367,8 +365,8 @@ for earning in earnings:
 
 print(f"Your total earnings you worked for today were: $${total_money}")
 name.deposit(total_money)
-print(f"$$20 have been deducted into your account to pay rent")
-name.deposit(-20)
+print(f"$$120 have been deducted into your account to pay rent")
+name.deposit(-120)
 print(name.__dict__)
 
 
